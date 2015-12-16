@@ -15,11 +15,12 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <string.h>
+#include <string>
 
 class Recv {
 public:
 	Recv();
-	virtual void RecvMSG() = 0;
+	virtual std::string RecvMSG() = 0;
 	virtual void sendAnswer(std::string DATA, int length) = 0;
 	virtual ~Recv();
 protected:
