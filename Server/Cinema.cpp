@@ -163,16 +163,17 @@ void Cinema::start(string msg)
  */
 string Cinema::scanInput()
 {
-	char input;
+	char input = ' ';
 	string scanned = "";
-	cin.get();
+	int i = 0;
 	//continue to scan until we reach \n
 	do
 	{
-		input = cin.get();
+		input = this->msg[i];
 		if(input != '\n')
 			scanned += input;
-	}while(input != '\n');
+		i++;
+	}while(i<this->msg.length());
 	//return the string
 	return scanned;
 }
@@ -187,11 +188,16 @@ Movie* Cinema::scanMovie()
 	float rate;
 	Movie* newMovie;
 
-	cin>>id;
-	cin>>name;
-	cin>>length;
-	cin>>publishYear;
-	cin>>rate;
+	id = getIn();
+	//cin>>id;
+	name = getIn();
+	//cin>>name;
+	length = atoi(getIn().c_str());
+	//cin>>length;
+	publishYear = atoi(getIn().c_str());
+	//cin>>publishYear;
+	rate = atof(getIn().c_str());
+	//cin>>rate;
 	summary = scanInput();
 	//if there was an error new movie return NULL
 	newMovie = new Movie(id,name,length,publishYear, rate, summary);
