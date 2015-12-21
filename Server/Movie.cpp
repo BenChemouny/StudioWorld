@@ -7,6 +7,7 @@
 #include <string>
 #include <string.h>
 #include <list>
+#include <sstream>
 using namespace std;
 /**
  * the constructor of the movie class
@@ -27,6 +28,7 @@ Movie::Movie(string id, string name, int length, int publishYear, float rate, st
 	this->publishYear = publishYear;
 	this->rate = rate;
 	this->summary = summary;
+	this->outp = "";
 }
 /**
  * this function gets a professional and add it to the movie
@@ -64,24 +66,45 @@ void Movie::deleteProfessional(Professional* pro)
 /**
  * this function print the information about the movie
  */
-void Movie::print()
+string Movie::print()
 {
-	cout<<id<<" "<<name<<" "<<length<<" "<<publishYear<<" "<<rate<<" ";
-	printGenres();
-	cout<<summary<<endl;
+	this->outp="";
+	stringstream convert1;
+	stringstream convert2;
+	stringstream convert3;
+	convert1<<length;
+	string sLength = convert1.str();
+	//cout << sLength << endl;
+	convert2<<publishYear;
+	string sPublishYear = convert2.str();
+	convert3<<rate;
+	string sRate = convert3.str();
+	//cout << sRate << endl;
+	outp += id + " "+ name + " " + sLength + " "+ sPublishYear+ " "+ sRate+ " ";
+	//cout<<outp<<endl;
+	//cout<<id<<" "<<name<<" "<<length<<" "<<publishYear<<" "<<rate<<" ";
+	outp += printGenres();
+	//cout<<outp<<endl;
+	outp += summary + "\n";
+	//cout<<outp<<endl;
+	//cout<<summary<<endl;
 	printProfessionals();
+	return outp;
 }
 /**
  * this function print all the professionals of this movie
  */
-void Movie::printProfessionals()
+string Movie::printProfessionals()
 {
+	//this->outp="";
 	sortProfessionals();
 	list<Professional*>::iterator it;
 	for(it = professionals.begin(); it != professionals.end(); it++)
 	{
-		(*it)->print();
+		outp += (*it)->print();
+		outp += "\n";
 	}
+	return outp;
 }
 /**
  * this function gets a genre and add it to the movie
@@ -94,22 +117,27 @@ void Movie::addGenre(string genre)
 /**
  * this functoin print all the genres of this movie
  */
-void Movie::printGenres()
+string Movie::printGenres()
 {
+	string outp = "";
 	if(genres.begin() != genres.end())
 	{
 		list<string>::iterator it;
 		for(it = genres.begin(); it != genres.end(); it++)
 		{
-			cout<<*it;
+			outp += *it;
+			//cout<<*it;
 			if((++it)!=genres.end())
 			{
-				cout<<",";
+				outp += ",";
+				//cout<<",";
 			}
 			--it;
 		}
-		cout<<" ";
+		outp += " ";
+		//cout<<" ";
 	}
+	return outp;
 }
 /**
  * this function gets a movie and merge it to this movie

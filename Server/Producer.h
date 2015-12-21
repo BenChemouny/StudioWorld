@@ -25,7 +25,7 @@ public:
 	/**
 	 * this function print the details about the producer
 	 */
-	void print();
+	string print();
 };
 
 #endif

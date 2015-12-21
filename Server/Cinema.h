@@ -19,6 +19,7 @@ class Cinema
 	list<Professional*> professionals;
 
 	string msg;
+	string output;
 public:
 	/**
 	 * empty constructor of cinema class

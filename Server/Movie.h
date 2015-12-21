@@ -34,6 +34,7 @@ class Movie
 	enum SortType sortType;
 	//the list of the genres of the movie
 	list<string> genres;
+	std::string outp;
 public:
 	/**
 	 * the constructor of the movie class
@@ -60,11 +61,11 @@ public:
 	/**
 	 * this function print the information about the movie
 	 */
-	void print();
+	string print();
 	/**
 	 * this function print all the professionals of this movie
 	 */
-	void printProfessionals();
+	string printProfessionals();
 	/**
 	 * this function gets a genre and add it to the movie
 	 * @param genre: the genre to add
@@ -73,7 +74,7 @@ public:
 	/**
 	 * this functoin print all the genres of this movie
 	 */
-	void printGenres();
+	string printGenres();
 	/**
 	 * this function gets a movie and merge it to this movie
 	 * @param m: the movie to merge

@@ -5,6 +5,9 @@
  */
 #include "Actor.h"
 #include <string>
+#include <sstream>
+#include <string.h>
+#include <stdlib.h>
 using namespace std;
 /**
  * this is the empty constructor of Actor class
@@ -35,7 +38,11 @@ Actor::Actor(string id, string name, string info, int age, enum Gender gender)
  */
 string Actor::print()
 {
-	return name+" "+age;
+	stringstream convert;
+	convert << age;
+	string sAge = convert.str();
+	//string sage = string(age);
+	return name + " " + sAge;
 }
 /**
  * this is the destructor of the actor
