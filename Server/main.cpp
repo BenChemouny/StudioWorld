@@ -11,7 +11,7 @@
 int main(int argc, char* argv[])
 {
 	Cinema cinema;
-	string msg = "nadav ben";
+	string msg = "1 asd asd asd";
 	cinema.start(msg);
 	return 0;
 }

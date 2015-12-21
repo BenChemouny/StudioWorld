@@ -11,6 +11,7 @@
 #include <list>
 #include <string>
 #include <string.h>
+#include <stdlib.h>
 using namespace std;
 /**
  * empty constructor of cinema class
@@ -20,7 +21,6 @@ Cinema::Cinema()
 }
 string Cinema::getIn()
 {
-	cout<<this->msg.length()<<endl;
 	string input = "";
 	string newMsg = "";
 	int i;
@@ -54,7 +54,8 @@ void Cinema::start(string msg)
 	//continue to run until the user type -1
 		success = 1;
 		printmsg = 1;
-		cin>>command;
+		command = atoi(getIn().c_str());
+		//cin>>command;
 		//get a command and do what it says
 		switch(command)
 		{
@@ -62,10 +63,12 @@ void Cinema::start(string msg)
 			printmsg = 0;
 			break;
 		case 1:
+			cout<<"1"<<endl;
 			newMovie = scanMovie();
 			success = addNewMovie(newMovie);
 			break;
 		case 2:
+			cout<<"2"<<endl;
 			newPro = scanProfessional();
 			if(newPro != NULL)
 			{
