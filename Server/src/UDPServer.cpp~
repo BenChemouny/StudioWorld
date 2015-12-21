@@ -1,13 +1,7 @@
-/****************************************
-* Student Name: Nadav and Ben            *
-* Exercise Name:  EX-4              *
-* File description:  UDPServer.cpp              *
-****************************************/
 #include "UDPServer.h"
 #include "Recv.h"
 #include <iostream>
 using namespace std;
-
 
 UDPServer::UDPServer(int port)
 {

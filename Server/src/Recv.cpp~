@@ -3,7 +3,7 @@
 /****************************************
 * Student Name: Nadav and Ben            *
 * Exercise Name:  EX-4              *
-* File description:  Recv.cpp              *
+* File description:  Server.cpp              *
 ****************************************/
 Recv::Recv()
 {

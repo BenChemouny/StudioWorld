@@ -1,10 +1,8 @@
-//============================================================================
-// Name        : Client.cpp
-// Author      : 
-// Version     :
-// Copyright   : 
-// Description : Hello World in C++, Ansi-style
-//============================================================================
+/****************************************
+* Student Name: Nadav and Ben            *
+* Exercise Name:  EX-4              *
+* File description:  Client.cpp              *
+****************************************/
 using namespace std;
 #include <iostream>
 #include "UDPConnection.h"
