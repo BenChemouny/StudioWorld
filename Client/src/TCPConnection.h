@@ -12,7 +12,9 @@
 
 class TCPConnection: public ConCt {
 public:
-	TCPConnection();
+	TCPConnection(std::string IP,int port);
+	void sendMSG(std::string DATA,int length);
+	void getAnswer();
 	virtual ~TCPConnection();
 };
 

@@ -19,9 +19,9 @@
 class ConCt {
 public:
 	ConCt();
-	virtual void sendMSG(std::string DATA,int length)=0;
-	virtual void getAnswer()=0;
-	virtual ~ConCt();
+	 virtual void sendMSG(std::string DATA,int length) =0;
+	 virtual void getAnswer()=0;
+	 virtual ~ConCt();
 protected:
 	struct sockaddr_in sin;
 	int sock;

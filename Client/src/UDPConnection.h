@@ -13,7 +13,7 @@
 
 class UDPConnection: public ConCt {
 public:
-	UDPConnection(std::string IP,int port);
+	UDPConnection(std::string Ip,int Port);
 	void sendMSG(std::string DATA,int length);
 	void getAnswer();
 	virtual ~UDPConnection();

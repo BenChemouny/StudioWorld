@@ -7,9 +7,7 @@
 #include "ConCt.h"
 
 ConCt::ConCt() {
-	this->sock = 0;
 }
-
 ConCt::~ConCt() {
 	// TODO Auto-generated destructor stub
 }

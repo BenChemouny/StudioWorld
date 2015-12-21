@@ -9,7 +9,7 @@ using namespace std;
 #include "ConCt.h"
 #include <iostream>
 
-UDPConnection::UDPConnection(std::string Ip,int Port) : ConCt() {
+UDPConnection::UDPConnection(std::string Ip,int Port) {
 	this->sock = socket(AF_INET, SOCK_DGRAM, 0);
 	this->DATA = "";
     memset(&this->sin, 0, sizeof(this->sin));
@@ -23,14 +23,14 @@ void UDPConnection::sendMSG(std::string DATA,int length)
     if (sent_bytes < 0) {
         perror("error writing to socket");
     }
-    cout << "Sent : " << DATA.data()<< " To : " << this->sin.sin_addr.s_addr << ":" << this->sin.sin_port << endl;
+    cout << "Sent : " << DATA.data()<< " To : " << sin.sin_addr.s_addr << ":" << sin.sin_port << endl;
 }
 void UDPConnection::getAnswer(){
     struct sockaddr_in from;
     unsigned int from_len = sizeof(struct sockaddr_in);
     char buffer[4096];
     memset(&buffer, 0, sizeof(buffer));
-    int bytes = recvfrom(this->sock, buffer, sizeof(buffer), 0, (struct sockaddr *) &from, &from_len);
+    int bytes = recvfrom(sock, buffer, sizeof(buffer), 0, (struct sockaddr *) &from, &from_len);
     if (bytes < 0) {
         perror("error reading from socket");
     }
