@@ -23,6 +23,7 @@ void UDPConnection::sendMSG(std::string DATA,int length)
     if (sent_bytes < 0) {
         perror("error writing to socket");
     }
+    cout << "Sent : " << DATA.data()<< " To : " << this->sin.sin_addr.s_addr << ":" << this->sin.sin_port << endl;
 }
 void UDPConnection::getAnswer(){
     struct sockaddr_in from;

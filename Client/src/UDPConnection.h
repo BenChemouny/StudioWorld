@@ -9,7 +9,7 @@
 #define UDPCONNECTION_H_
 
 #include "ConCt.h"
-#include "string.h"
+#include <string>
 
 class UDPConnection: public ConCt {
 public:

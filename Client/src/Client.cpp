@@ -9,10 +9,12 @@
 #include <iostream>
 using namespace std;
 #include "UDPConnection.h"
+#include <string>
 
-int main() {
+int main(int argc, char * argv[]) {
 	std::string MSG = "Hello, its ME";
-	UDPConnection conn("localhost",5555);
+	std::string IP = "192.168.8.139";
+	UDPConnection conn(argv[0],55555);
 	conn.sendMSG(MSG,MSG.length());
 	conn.getAnswer();
 }
