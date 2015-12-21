@@ -13,7 +13,7 @@ using namespace std;
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-	string command=" ";
+	string command;
 	if(argc>4) { cout << "missing args" ; return 0 ; }
 	string type = string(argv[1]);
 	string IP = string(argv[2]);
@@ -31,9 +31,9 @@ int main(int argc, char *argv[]) {
 		return 1;
 
 	cout << "Hello, and Welcome to the Studio. (" << type << ") Edition !!"<<"\n \n" << endl;
+	std::getline(std::cin, command);
 	while(command!="-1")
 	{
-		std::getline(std::cin, command);
 		Conn->sendMSG(command,command.length());
 		Conn->getAnswer();
 	}
