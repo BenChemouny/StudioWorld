@@ -13,7 +13,7 @@
 class UDPServer: public Recv {
 public:
 	UDPServer(int port);
-	void RecvMSG();
+	std::string RecvMSG();
 	void sendAnswer(std::string DATA, int length);
 	virtual ~UDPServer();
 };

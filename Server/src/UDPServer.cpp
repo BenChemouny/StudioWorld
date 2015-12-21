@@ -20,7 +20,7 @@ UDPServer::UDPServer(int port)
 		perror("error binding to socket");
 	}
 }
-void UDPServer::RecvMSG()
+std::string UDPServer::RecvMSG()
 {
 	unsigned int from_len = sizeof(struct sockaddr_in);
 	char buffer[4096];
@@ -29,7 +29,8 @@ void UDPServer::RecvMSG()
 	{
 		perror("error reading from socket");
 	}
-	cout<<"The client sends: "<<buffer<<endl;
+	//cout<<"The client sends: "<<buffer<<endl;
+	return buffer;
 }
 void UDPServer::sendAnswer(std::string DATA, int length)
 {

@@ -9,7 +9,8 @@ int main(int argc, char * argv[]) {
 	Recv* server = new UDPServer(atoi(argv[1]));
 	while (true)
 	{
-	server->RecvMSG();
-	server->sendAnswer("success",7);
+	std::string msg = "";
+	msg = server->RecvMSG();
+	server->sendAnswer(msg, msg.length());
 	}
 }
