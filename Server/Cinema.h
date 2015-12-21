@@ -17,15 +17,18 @@ class Cinema
 	list<Movie*> movies;
 	//this list holds all the professionals
 	list<Professional*> professionals;
+
+	string msg;
 public:
 	/**
 	 * empty constructor of cinema class
 	 */
 	Cinema();
+	string getIn();
 	/*
 	 * this function start the program itself and wait for the user to type data
 	 */
-	void start();
+	void start(string msg);
 	/*
 	 * this function scan for an input until the \n char
 	 * @return: the input as a string

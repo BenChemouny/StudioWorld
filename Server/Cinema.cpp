@@ -18,11 +18,30 @@ using namespace std;
 Cinema::Cinema()
 {
 }
+string Cinema::getIn()
+{
+	cout<<this->msg.length()<<endl;
+	string input = "";
+	string newMsg = "";
+	int i;
+	for(i = 0; this->msg[i] != ' ' && i < this->msg.length(); i++)
+	{
+		input += this->msg[i];
+	}
+	i++;
+	for(; i < this->msg.length(); i++)
+	{
+		newMsg += this->msg[i];
+	}
+	this->msg = newMsg;
+	return input;
+}
 /*
  * this function start the program itself and wait for the user to type data
  */
-void Cinema::start()
+void Cinema::start(string msg)
 {
+	this->msg = msg;
 	Movie* newMovie;
 	Professional* newPro;
 	string movieId;
@@ -33,8 +52,6 @@ void Cinema::start()
 	int printmsg;
 	int command;
 	//continue to run until the user type -1
-	do
-	{
 		success = 1;
 		printmsg = 1;
 		cin>>command;
@@ -136,7 +153,6 @@ void Cinema::start()
 				cout<<"Failure"<<endl;
 			}
 		}
-	}while(command != -1);
 }
 /*
  * this function scan for an input until the \n char
