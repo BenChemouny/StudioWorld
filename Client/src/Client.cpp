@@ -29,13 +29,13 @@ int main(int argc, char *argv[]) {
 	}
 	else
 		return 1;
-
 	cout << "Hello, and Welcome to the Studio. (" << type << ") Edition !!"<<"\n \n" << endl;
+	std::getline(std::cin, command);	
 	while(command!="-1")
 	{
-		std::getline(std::cin, command);
 		Conn->sendMSG(command+"\0",command.length()+1);
 		Conn->getAnswer();
+		std::getline(std::cin, command);
 	}
 	return 1;
 }
