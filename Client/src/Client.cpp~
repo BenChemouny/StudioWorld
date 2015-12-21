@@ -14,7 +14,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 	string command=" ";
-	if(argc>4) { cout << "missing args" ; return 0 ; }
+	if(argc>4) { cout << "missing args" ; return 1 ; }
 	string type = string(argv[1]);
 	string IP = string(argv[2]);
 	int Port = atoi(argv[3]);
