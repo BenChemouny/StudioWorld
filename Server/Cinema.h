@@ -28,7 +28,7 @@ public:
 	/*
 	 * this function start the program itself and wait for the user to type data
 	 */
-	void start(string msg);
+	string start(string msg);
 	/*
 	 * this function scan for an input until the \n char
 	 * @return: the input as a string

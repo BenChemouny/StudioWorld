@@ -39,7 +39,7 @@ string Cinema::getIn()
 /*
  * this function start the program itself and wait for the user to type data
  */
-void Cinema::start(string msg)
+string Cinema::start(string msg)
 {
 	this->msg = msg;
 	Movie* newMovie;
@@ -63,12 +63,10 @@ void Cinema::start(string msg)
 			printmsg = 0;
 			break;
 		case 1:
-			cout<<"1"<<endl;
 			newMovie = scanMovie();
 			success = addNewMovie(newMovie);
 			break;
 		case 2:
-			cout<<"2"<<endl;
 			newPro = scanProfessional();
 			if(newPro != NULL)
 			{
@@ -228,11 +226,16 @@ Professional* Cinema::scanProfessional()
 	string info, name, sgender, id;
 	enum Gender gender;
 
-	cin>>type;
-	cin>>id;
-	cin>>age;
-	cin>>info;
-	cin>>sgender;
+	type = atoi(getIn().c_str());
+	//cin>>type;
+	id = getIn();
+	//cin>>id;
+	age = atoi(getIn().c_str());
+	//cin>>age;
+	info = getIn();
+	//cin>>info;
+	sgender = getIn();
+	//cin>>sgender;
 	name = scanInput();
 
 	if(!strcmp(sgender.c_str(), "male"))
@@ -538,10 +541,11 @@ int Cinema::mergeInput()
 	string value = "";
 	list<string> ids;
 	Movie* newMovie;
-	cin.get();
+
+	int i = 0;
 	do
 	{
-		input = cin.get();
+		input = this->msg[i];
 		if(input != '\n')
 		{
 			if(input == ',')
@@ -554,11 +558,13 @@ int Cinema::mergeInput()
 				value += input;
 			}
 		}
-		else
-		{
-			ids.push_back(value);
-		}
-	}while(input != '\n');
+		//else
+		//{
+			//ids.push_back(value);
+		//}
+		i++;
+	}while(i < this->msg.length());
+	ids.push_back(value);
 	newMovie = mergeMovies(ids);
 	return addNewMovie(newMovie);
 }
