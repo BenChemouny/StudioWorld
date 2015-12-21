@@ -28,7 +28,7 @@ Producer::Producer(string id, string name, string info, int age, enum Gender gen
 /**
  * this function print the details about the producer
  */
-string Producer::print()
+void Producer::print()
 {
-	return name;
+	cout<<name<<endl;
 }

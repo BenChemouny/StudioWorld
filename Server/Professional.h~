@@ -31,7 +31,7 @@ public:
 	 * abstract function.
 	 * this function print the information of the professional
 	 */
-	virtual string print() = 0;
+	virtual void print() = 0;
 	/**
 	 * this function return the id of the professional
 	 * @return: the id of the professional

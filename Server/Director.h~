@@ -6,7 +6,6 @@
 #ifndef SRC_DIRECTOR_H_
 #define SRC_DIRECTOR_H_
 #include "Professional.h"
-#include <string>
 using namespace std;
 //director class
 class Director: public Professional
@@ -26,7 +25,7 @@ public:
 	/**
 	 * this function print the details about the director
 	 */
-	string print();
+	void print();
 };
 
 

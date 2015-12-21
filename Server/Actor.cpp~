@@ -33,9 +33,9 @@ Actor::Actor(string id, string name, string info, int age, enum Gender gender)
 /**
  * this function print the information of the actor to the screen
  */
-string Actor::print()
+void Actor::print()
 {
-	return name+" "+age;
+	cout<<name<<" "<<age<<endl;
 }
 /**
  * this is the destructor of the actor

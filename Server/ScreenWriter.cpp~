@@ -29,7 +29,7 @@ ScreenWriter::ScreenWriter(string id, string name, string info, int age, enum Ge
 /**
  * this function print the details about the screen writer
  */
-string ScreenWriter::print()
+void ScreenWriter::print()
 {
-	return name + " " + info ;
+	cout<<name<<" "<<info<<endl;
 }
