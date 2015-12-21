@@ -1,13 +1,7 @@
-/****************************************
-* Student Name: Nadav and Ben            *
-* Exercise Name:  EX-4              *
-* File description:  TCPServer.cpp              *
-****************************************/
 #include "TCPServer.h"
 #include "Recv.h"
 #include <iostream>
 using namespace std;
-
 
 TCPServer::TCPServer(int port)
 {

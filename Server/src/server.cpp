@@ -4,6 +4,11 @@
 #include "TCPServer.h"
 #include <stdlib.h>
 
+/****************************************
+* Student Name: Nadav and Ben            *
+* Exercise Name:  EX-4              *
+* File description:  Server.cpp              *
+****************************************/
 using namespace std;
 
 int main(int argc, char *argv[]) {

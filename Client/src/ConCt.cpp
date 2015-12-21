@@ -1,9 +1,8 @@
-/*
- * ConCt.cpp
- *
- *  Created on: Dec 21, 2015
- *      Author: waeky
- */
+/****************************************
+* Student Name: Nadav and Ben            *
+* Exercise Name:  EX-4              *
+* File description:  ConCt.cpp              *
+****************************************/
 #include "ConCt.h"
 
 ConCt::ConCt() {

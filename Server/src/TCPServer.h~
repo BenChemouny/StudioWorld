@@ -4,11 +4,6 @@
  *  Created on: Dec 21, 2015
  *      Author: nadav
  */
-/****************************************
-* Student Name: Nadav and Ben            *
-* Exercise Name:  EX-4              *
-* File description:  TCPServer.h              *
-****************************************/
 #ifndef SERVEROOP_TCPSERVER_H_
 #define SERVEROOP_TCPSERVER_H_
 #include "Recv.h"

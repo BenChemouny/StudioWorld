@@ -4,11 +4,10 @@
  *  Created on: Dec 16, 2015
  *      Author: nadav
  */
-/****************************************
-* Student Name: Nadav and Ben            *
-* Exercise Name:  EX-4              *
-* File description:  Recv.h              *
-****************************************/
+/*********************************************************************
+* Program name:    Recv                                  *
+* The operation:       Main class for Connections (UDP/TCP)          *    
+*********************************************************************/
 
 #ifndef RECV_H_
 #define RECV_H_
