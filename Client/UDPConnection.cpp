@@ -1,22 +1,28 @@
-/*
- * UDPConnection.cpp
- *
- *  Created on: Dec 21, 2015
- *      Author: waeky
- */
+/****************************************
+* Student Name: Nadav and Ben            *
+* Exercise Name:  EX-4              *
+* File description:  UDPConnection.cpp              *
+****************************************/
 using namespace std;
 #include "UDPConnection.h"
 #include "ConCt.h"
 #include <iostream>
-
+/******************************************
+* The Constructor creates the connection *
+* Initiallizing the socket, build the Internet *
+* Struct and ready to transmit data *	
+*******************************************/
 UDPConnection::UDPConnection(std::string Ip,int Port) {
 	this->sock = socket(AF_INET, SOCK_DGRAM, 0);
-	this->DATA = "";
     memset(&this->sin, 0, sizeof(this->sin));
     this->sin.sin_family = AF_INET;
     this->sin.sin_addr.s_addr = inet_addr(Ip.data());
     this->sin.sin_port = htons(Port);
 }
+/******************************************
+* sendMsg get a message to send (as a string) and its length *
+* and sends it out accourding to the UDP Protocol *	
+*******************************************/
 void UDPConnection::sendMSG(std::string DATA,int length)
 {
     int sent_bytes = sendto(this->sock, DATA.data(), length, 0, (struct sockaddr *) &sin, sizeof(sin));
@@ -24,6 +30,10 @@ void UDPConnection::sendMSG(std::string DATA,int length)
         perror("error writing to socket");
     }
 }
+/******************************************
+* getAnswer uses the recvfrom fuction to get any server *
+* messages with the the UDP protocol and print it on-screen *	
+*******************************************/
 void UDPConnection::getAnswer(){
     struct sockaddr_in from;
     unsigned int from_len = sizeof(struct sockaddr_in);

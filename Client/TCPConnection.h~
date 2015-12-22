@@ -1,8 +1,9 @@
-/****************************************
-* Student Name: Nadav and Ben            *
-* Exercise Name:  EX-4              *
-* File description:  TCPConnection.h              *
-****************************************/
+/*
+ * TCPConnection.h
+ *
+ *  Created on: Dec 21, 2015
+ *      Author: waeky
+ */
 
 #ifndef TCPCONNECTION_H_
 #define TCPCONNECTION_H_

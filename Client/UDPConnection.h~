@@ -1,8 +1,10 @@
-/****************************************
-* Student Name: Nadav and Ben            *
-* Exercise Name:  EX-4              *
-* File description:  UDPConnection.h              *
-****************************************/
+/*
+ * UDPConnection.h
+ *
+ *  Created on: Dec 21, 2015
+ *      Author: waeky
+ */
+
 #ifndef UDPCONNECTION_H_
 #define UDPCONNECTION_H_
 

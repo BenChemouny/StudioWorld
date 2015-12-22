@@ -1,8 +1,9 @@
-/****************************************
-* Student Name: Nadav and Ben            *
-* Exercise Name:  EX-4              *
-* File description:  ConCt.h              *
-****************************************/
+/*
+ * ConCt.h
+ *
+ *  Created on: Dec 21, 2015
+ *      Author: waeky
+ */
 
 #ifndef CONCT_H_
 #define CONCT_H_
