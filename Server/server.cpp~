@@ -10,11 +10,7 @@ using namespace std;
 int main(int argc, char *argv[]) {
 	if(argc < 3)
 	{
-<<<<<<< HEAD
 		return 1;
-=======
-		return -1;
->>>>>>> 5e0cb5a6d5e082a10991d187e36581d091ab289b
 	}
 	string type = string(argv[1]);
 	Recv* server;
@@ -35,7 +31,7 @@ int main(int argc, char *argv[]) {
 	{
 	std::string msg = "";
 	msg = server->RecvMSG();
-	string response = cinema.start(msg);
+	string response = cinema.start(msg)+ "\0";
 	server->sendAnswer(response, response.length());
 	}
 }

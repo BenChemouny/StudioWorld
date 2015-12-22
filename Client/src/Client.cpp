@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 	while(command!="-1")
 	{
 		Conn->sendMSG(command+"\0",command.length()+1);
-		cout << Conn->getAnswer();
+		cout << (Conn->getAnswer());
 		std::getline(std::cin, command);
 	}
 	return 1;
