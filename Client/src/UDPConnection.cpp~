@@ -23,7 +23,6 @@ void UDPConnection::sendMSG(std::string DATA,int length)
     if (sent_bytes < 0) {
         perror("error writing to socket");
     }
-    cout << "Sent : " << DATA.data()<< " To : " << sin.sin_addr.s_addr << ":" << sin.sin_port << endl;
 }
 void UDPConnection::getAnswer(){
     struct sockaddr_in from;
@@ -34,7 +33,7 @@ void UDPConnection::getAnswer(){
     if (bytes < 0) {
         perror("error reading from socket");
     }
-    cout << "The server sent: " << buffer << endl;
+	cout<<buffer;
 }
 UDPConnection::~UDPConnection() {
 	// TODO Auto-generated destructor stub
