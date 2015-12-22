@@ -1,10 +1,18 @@
+/*
+ * 8921005	Nadav Schweitzer
+		Ben Shimoni
+ */
 #include <iostream>
 #include <string>
 #include "UDPServer.h"
 #include "TCPServer.h"
 #include <stdlib.h>
 #include "Cinema.h"
-
+/**
+ * program name: ex4
+ * the operation: this program is a unit test that test
+ * the classes
+ */
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -31,9 +39,7 @@ int main(int argc, char *argv[]) {
 	{
 	std::string msg = "";
 	msg = server->RecvMSG();
-	cout<<"msg: "<<msg<<endl;
 	string response = cinema.start(msg);
-	cout<<"res: "<<response<<endl;
 	server->sendAnswer(response, response.length());
 	}
 }

@@ -3,6 +3,10 @@
 #include <iostream>
 using namespace std;
 
+/*
+* this is the constructor of the tcpServer class
+* @param port: the port that the server will listen to
+*/
 TCPServer::TCPServer(int port)
 {
 	sock = socket(AF_INET, SOCK_STREAM, 0);
@@ -33,6 +37,10 @@ TCPServer::TCPServer(int port)
 		perror("error accepting client");
 	}
 }
+/*
+* this function recive the message from the client and return it
+* @return: the message
+*/
 std::string TCPServer::RecvMSG()
 {
 	char buffer[4096];
@@ -48,6 +56,11 @@ std::string TCPServer::RecvMSG()
 		return buffer;
 	}
 }
+/*
+* this function send a message to the client
+* @param DATA: the message to send
+* @param length: the length of the message
+*/
 void TCPServer::sendAnswer(std::string DATA, int length)
 {
 	int send_bytes = send(client_sock, DATA.c_str(), length, 0);
@@ -56,6 +69,9 @@ void TCPServer::sendAnswer(std::string DATA, int length)
 		perror("error sending to client");
 	}
 }
+/*
+* the destructor of the class, close the socket
+*/
 TCPServer::~TCPServer()
 {
 	close(sock);
