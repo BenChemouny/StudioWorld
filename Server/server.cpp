@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 	{
 	std::string msg = "";
 	msg = server->RecvMSG();
-	string response = cinema.start(msg);
+	string response = cinema.start(msg)+ "\0";
 	server->sendAnswer(response, response.length());
 	}
 }
