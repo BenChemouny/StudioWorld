@@ -27,16 +27,17 @@ void TCPConnection::sendMSG(std::string DATA,int length)
         perror("error writing to socket");
     }
 }
-void TCPConnection::getAnswer(){
+string TCPConnection::getAnswer(){
 	char buffer[4096];
 	int expected_data_len = sizeof(buffer);
 	int read_bytes = recv(sock, buffer, expected_data_len, 0);
 	    if (read_bytes == 0) {
-	    	return;
+	    	perror("end of transmition");
 	    }
 	    else if (read_bytes < 0) {
 	    	perror("error reading from socket");
 	    }
+	return buffer;
 }
 TCPConnection::~TCPConnection() {
 	// TODO Auto-generated destructor stub

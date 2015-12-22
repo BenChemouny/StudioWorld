@@ -9,7 +9,6 @@
 #define TCPCONNECTION_H_
 
 #include "ConCt.h"
-#include <string>
 
 class TCPConnection: public ConCt {
 public:

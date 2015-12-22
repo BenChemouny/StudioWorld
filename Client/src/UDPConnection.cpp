@@ -24,7 +24,7 @@ void UDPConnection::sendMSG(std::string DATA,int length)
         perror("error writing to socket");
     }
 }
-void UDPConnection::getAnswer(){
+string UDPConnection::getAnswer(){
     struct sockaddr_in from;
     unsigned int from_len = sizeof(struct sockaddr_in);
     char buffer[4096];
@@ -33,6 +33,7 @@ void UDPConnection::getAnswer(){
     if (bytes < 0) {
         perror("error reading from socket");
     }
+    return buffer;
 }
 UDPConnection::~UDPConnection() {
 	// TODO Auto-generated destructor stub
