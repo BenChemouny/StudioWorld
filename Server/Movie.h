@@ -36,6 +36,7 @@ class Movie
 	list<string> genres;
 	std::string outp;
 public:
+	void emptyOutp();
 	/**
 	 * the constructor of the movie class
 	 * the function gets the information of the movie and return a new movie

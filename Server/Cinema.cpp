@@ -524,6 +524,7 @@ int Cinema::printProfessionalsOfMovie(string movieId)
 	Movie* movie = findMovieById(movieId);
 	if(movie == NULL)
 		return 0;
+	movie->emptyOutp();
 	this->output += movie->printProfessionals();
 	return 1;
 }
