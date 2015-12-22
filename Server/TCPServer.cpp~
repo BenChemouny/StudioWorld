@@ -1,3 +1,8 @@
+/*
+ * student name: Nadav Schweitzer
+ * exercise name: ex4
+ * file description: TCPServer class
+ */
 #include "TCPServer.h"
 #include "Recv.h"
 #include <iostream>
@@ -57,8 +62,9 @@ std::string TCPServer::RecvMSG()
 	}
 }
 /*
-* this function recive the message from the client and return it
-* @return: the message
+* this function send a message to the client
+* @param DATA: the message to send
+* @param length: the length of the message
 */
 void TCPServer::sendAnswer(std::string DATA, int length)
 {
@@ -68,6 +74,9 @@ void TCPServer::sendAnswer(std::string DATA, int length)
 		perror("error sending to client");
 	}
 }
+/*
+* the destructor of the class, close the socket
+*/
 TCPServer::~TCPServer()
 {
 	close(sock);

@@ -1,3 +1,8 @@
+/*
+ * student name: Nadav Schweitzer & Ben Shimoni
+ * exercise name: ex4
+ * file description: TCPServer class
+ */
 #ifndef SERVEROOP_TCPSERVER_H_
 #define SERVEROOP_TCPSERVER_H_
 #include "Recv.h"

@@ -1,3 +1,8 @@
+/*
+ * student name: Nadav Schweitzer
+ * exercise name: ex4
+ * file description: TCPServer class
+ */
 #ifndef SERVEROOP_TCPSERVER_H_
 #define SERVEROOP_TCPSERVER_H_
 #include "Recv.h"
@@ -5,7 +10,9 @@
 
 class TCPServer: public Recv {
 protected:
+	//the socket of the client
 	int client_sock;
+	//the socket of the server
 	int sock;
 public:
 	/*

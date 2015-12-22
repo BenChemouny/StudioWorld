@@ -1,3 +1,8 @@
+/*
+ * student name: Nadav Schweitzer
+ * exercise name: ex4
+ * file description: UDPServer class
+ */
 #include "UDPServer.h"
 #include "Recv.h"
 #include <iostream>
@@ -53,6 +58,9 @@ void UDPServer::sendAnswer(std::string DATA, int length)
 		perror("error writing to socket");
 	}
 }
+/*
+* the destructor of the class, close the socket
+*/
 UDPServer::~UDPServer()
 {
 	close(sock);

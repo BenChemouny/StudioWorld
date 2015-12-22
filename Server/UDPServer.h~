@@ -1,3 +1,8 @@
+/*
+ * student name: Nadav Schweitzer
+ * exercise name: ex4
+ * file description: UDPServer class
+ */
 #ifndef UDPSERVER_H_
 #define UDPSERVER_H_
 #include "Recv.h"

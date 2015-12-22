@@ -1,6 +1,6 @@
 /*
- * student name: Nadav Schweitzer
- * exercise name: ex3
+ * student name: Nadav Schweitzer & Ben Shimoni
+ * exercise name: ex4
  * file description: professional class
  */
 #ifndef SRC_PROFESSIONAL_H_

@@ -1,6 +1,6 @@
 /*
- * student name: Nadav Schweitzer
- * exercise name: ex3
+  * student name: Nadav Schweitzer & Ben Shimoni
+ * exercise name: ex4
  * file description: director class
  */
 #ifndef SRC_DIRECTOR_H_

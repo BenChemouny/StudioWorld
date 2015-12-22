@@ -1,6 +1,6 @@
 /*
  * student name: Nadav Schweitzer
- * exercise name: ex3
+ * exercise name: ex4
  * file description: producer class
  */
 #include "Producer.h"
@@ -28,7 +28,7 @@ Producer::Producer(string id, string name, string info, int age, enum Gender gen
 /**
  * this function print the details about the producer
  */
-void Producer::print()
+string Producer::print()
 {
-	cout<<name<<endl;
+	return name;
 }

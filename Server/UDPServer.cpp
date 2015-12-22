@@ -1,3 +1,8 @@
+/*
+ * student name: Nadav Schweitzer & Ben Shimoni
+ * exercise name: ex4
+ * file description: UDPServer class
+ */
 #include "UDPServer.h"
 #include "Recv.h"
 #include <iostream>

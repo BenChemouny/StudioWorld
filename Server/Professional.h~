@@ -1,6 +1,6 @@
 /*
  * student name: Nadav Schweitzer
- * exercise name: ex3
+ * exercise name: ex4
  * file description: professional class
  */
 #ifndef SRC_PROFESSIONAL_H_
@@ -31,7 +31,7 @@ public:
 	 * abstract function.
 	 * this function print the information of the professional
 	 */
-	virtual void print() = 0;
+	virtual string print() = 0;
 	/**
 	 * this function return the id of the professional
 	 * @return: the id of the professional

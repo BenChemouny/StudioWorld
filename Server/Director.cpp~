@@ -1,6 +1,6 @@
 /*
  * student name: Nadav Schweitzer
- * exercise name: ex3
+ * exercise name: ex4
  * file description: director class
  */
 #include "Director.h"
@@ -30,5 +30,5 @@ Director::Director(string id, string name, string info, int age, enum Gender gen
  */
 string Director::print()
 {
-	cout << name;
+	return name;
 }
