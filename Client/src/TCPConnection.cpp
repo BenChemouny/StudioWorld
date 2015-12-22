@@ -26,7 +26,7 @@ void TCPConnection::sendMSG(std::string DATA,int length)
         perror("error writing to socket");
     }
 }
-string TCPConnection::getAnswer(){
+void TCPConnection::getAnswer(){
 	char buffer[4096];
 	int expected_data_len = sizeof(buffer);
 	int read_bytes = recv(sock, buffer, expected_data_len, 0);
@@ -36,7 +36,7 @@ string TCPConnection::getAnswer(){
 	    else if (read_bytes < 0) {
 	    	perror("error reading from socket");
 	    }
-	return buffer;
+	cout << buffer;
 }
 TCPConnection::~TCPConnection() {
 	// TODO Auto-generated destructor stub

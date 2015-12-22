@@ -15,7 +15,7 @@ class TCPConnection: public ConCt {
 public:
 	TCPConnection(std::string IP,int port);
 	void sendMSG(std::string DATA,int length);
-	string getAnswer();
+	void getAnswer();
 	virtual ~TCPConnection();
 };
 

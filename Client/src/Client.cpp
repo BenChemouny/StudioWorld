@@ -32,8 +32,8 @@ int main(int argc, char *argv[]) {
 	std::getline(std::cin, command);	
 	while(command!="-1")
 	{
-		Conn->sendMSG(command+"\0",command.length()+1);
-		cout << (Conn->getAnswer());
+		Conn->sendMSG(command,command.length());
+		Conn->getAnswer();
 		std::getline(std::cin, command);
 	}
 	return 1;

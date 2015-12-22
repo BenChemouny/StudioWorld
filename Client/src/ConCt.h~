@@ -21,7 +21,7 @@ class ConCt {
 public:
 	ConCt();
 	 virtual void sendMSG(std::string DATA,int length) =0;
-	 virtual string getAnswer()=0;
+	 virtual std::string getAnswer()=0;
 	 virtual ~ConCt();
 protected:
 	struct sockaddr_in sin;
