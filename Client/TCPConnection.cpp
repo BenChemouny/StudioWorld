@@ -1,14 +1,17 @@
-/*
- * TCPConnection.cpp
- *
- *  Created on: Dec 21, 2015
- *      Author: waeky
- */
+/****************************************
+* Student Name: Nadav and Ben            *
+* Exercise Name:  EX-4              *
+* File description:  TCPConnection.cpp              *
+****************************************/
 using namespace std;
 #include "TCPConnection.h"
 #include "ConCt.h"
 #include <iostream>
-
+/******************************************
+* The Constructor creates the connection *
+* Initiallizing the socket, build the Internet *
+* Struct and trying to connect to the server - handShake *	
+*******************************************/
 TCPConnection::TCPConnection(std::string Ip,int Port) {
 	this->sock = socket(AF_INET, SOCK_STREAM, 0);
     memset(&this->sin, 0, sizeof(this->sin));
@@ -19,6 +22,10 @@ TCPConnection::TCPConnection(std::string Ip,int Port) {
             perror("error connecting to server");
         }
 }
+/******************************************
+* sendMsg get a message to send (as a string) and its length *
+* and sends it out accourding to the TCP Protocol *	
+*******************************************/
 void TCPConnection::sendMSG(std::string DATA,int length)
 {
 	int sent_bytes = send(sock, DATA.data(), length, 0);
@@ -26,6 +33,10 @@ void TCPConnection::sendMSG(std::string DATA,int length)
         perror("error writing to socket");
     }
 }
+/******************************************
+* getAnswer uses the recv fuction to get any server *
+* messages with the the TCP protocol and print it on-screen *	
+*******************************************/
 void TCPConnection::getAnswer(){
 	char buffer[4096];
 	memset(&buffer, 0, sizeof(buffer));
