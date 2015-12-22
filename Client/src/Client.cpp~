@@ -32,9 +32,9 @@ int main(int argc, char *argv[]) {
 	std::getline(std::cin, command);	
 	while(command!="-1")
 	{
+		cout<<"Command: "<<command<<endl;
 		Conn->sendMSG(command,command.length());
 		Conn->getAnswer();
-		cout << Conn->getData();
 		std::getline(std::cin, command);
 	}
 	return 1;

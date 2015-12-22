@@ -512,6 +512,7 @@ void Cinema::printAllProfessionals()
 	for(it = professionals.begin(); it != professionals.end(); it++)
 	{
 		this->output += (*it)->print();
+		this->output += "\n";
 	}
 }
 /**

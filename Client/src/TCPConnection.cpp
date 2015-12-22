@@ -28,6 +28,7 @@ void TCPConnection::sendMSG(std::string DATA,int length)
 }
 void TCPConnection::getAnswer(){
 	char buffer[4096];
+	memset(&buffer, 0, sizeof(buffer));
 	int expected_data_len = sizeof(buffer);
 	int read_bytes = recv(sock, buffer, expected_data_len, 0);
 	    if (read_bytes == 0) {

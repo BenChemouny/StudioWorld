@@ -39,9 +39,10 @@ string Cinema::getIn()
 /*
  * this function start the program itself and wait for the user to type data
  */
-void Cinema::start(string msg)
+string Cinema::start(string msg)
 {
 	this->msg = msg;
+	this->output = "";
 	Movie* newMovie;
 	Professional* newPro;
 	string movieId;
@@ -63,12 +64,10 @@ void Cinema::start(string msg)
 			printmsg = 0;
 			break;
 		case 1:
-			cout<<"1"<<endl;
 			newMovie = scanMovie();
 			success = addNewMovie(newMovie);
 			break;
 		case 2:
-			cout<<"2"<<endl;
 			newPro = scanProfessional();
 			if(newPro != NULL)
 			{
@@ -82,34 +81,34 @@ void Cinema::start(string msg)
 		case 3:
 			//cin>>movieId;
 			//cin>>pId;
-			movieId = atoi(getIn().data());
-			pId = atoi(getIn().data());
+			movieId = getIn();
+			pId = getIn();
 			success = addProfessionalToMovie(movieId, pId);
 			break;
 		case 4:
 			//cin>>movieId;
 			//cin>>genre;
-			movieId = atoi(getIn().data());
+			movieId = getIn();
 			genre = getIn();
 			success = addGenreToMovie(movieId, genre);
 			break;
 		case 5:
 			//cin>>movieId;
 			//cin>>sortType;
-			movieId = atoi(getIn().data());
+			movieId = getIn();
 			sortType = atoi(getIn().data());
 			success = setSortForMovie(movieId, sortType);
 			break;
 		case 6:
 			//cin>>movieId;
-			movieId = atoi(getIn().data());
+			movieId = getIn();
 			success = printProfessionalsOfMovie(movieId);
 			if(success)
 				printmsg = 0;
 			break;
 		case 7:
 			//cin>>movieId;
-			movieId = atoi(getIn().data());
+			movieId = getIn();
 			printMovie(movieId);
 			printmsg = 0;
 			break;
@@ -117,7 +116,7 @@ void Cinema::start(string msg)
 			success = mergeInput();
 			break;
 		case 9:
-			pId = atoi(getIn().data());
+			pId = getIn();
 			//cin>>pId;
 			success = printMoviesWithProfessional(pId);
 			if(success)
@@ -125,19 +124,19 @@ void Cinema::start(string msg)
 			break;
 		case 10:
 			//cin>>movieId
-			movieId = atoi(getIn().data());
+			movieId = getIn();
 			success = deleteMovie(movieId);
 			break;
 		case 11:
 			//cin>>pId
-			pId = atoi(getIn().data());
+			pId = getIn();
 			success = deleteProfessional(pId);
 			break;
 		case 12:
 			//cin>>movieId
 			//cin>>pId
-			movieId = atoi(getIn().data());
-			pId = atoi(getIn().data());
+			movieId = getIn();
+			pId = getIn();
 			success = deleteProfessionalFromMovie(movieId, pId);
 			break;
 		case 13:
@@ -163,13 +162,16 @@ void Cinema::start(string msg)
 			//print if the command succeed or failed
 			if(success)
 			{
-				cout<<"Success"<<endl;
+				//cout<<"Success"<<endl;
+				this->output += "Success\n";
 			}
 			else
 			{
-				cout<<"Failure"<<endl;
+				//cout<<"Failure"<<endl;
+				this->output += "Failure\n";
 			}
 		}
+		return output;
 }
 /*
  * this function scan for an input until the \n char
@@ -177,16 +179,17 @@ void Cinema::start(string msg)
  */
 string Cinema::scanInput()
 {
-	char input;
+	char input = ' ';
 	string scanned = "";
-	cin.get();
+	int i = 0;
 	//continue to scan until we reach \n
 	do
 	{
-		input = cin.get();
+		input = this->msg[i];
 		if(input != '\n')
 			scanned += input;
-	}while(input != '\n');
+		i++;
+	}while(i<this->msg.length());
 	//return the string
 	return scanned;
 }
@@ -201,11 +204,16 @@ Movie* Cinema::scanMovie()
 	float rate;
 	Movie* newMovie;
 
-	cin>>id;
-	cin>>name;
-	cin>>length;
-	cin>>publishYear;
-	cin>>rate;
+	id = getIn();
+	//cin>>id;
+	name = getIn();
+	//cin>>name;
+	length = atoi(getIn().c_str());
+	//cin>>length;
+	publishYear = atoi(getIn().c_str());
+	//cin>>publishYear;
+	rate = atof(getIn().c_str());
+	//cin>>rate;
 	summary = scanInput();
 	//if there was an error new movie return NULL
 	newMovie = new Movie(id,name,length,publishYear, rate, summary);
@@ -222,11 +230,16 @@ Professional* Cinema::scanProfessional()
 	string info, name, sgender, id;
 	enum Gender gender;
 
-	cin>>type;
-	cin>>id;
-	cin>>age;
-	cin>>info;
-	cin>>sgender;
+	type = atoi(getIn().c_str());
+	//cin>>type;
+	id = getIn();
+	//cin>>id;
+	age = atoi(getIn().c_str());
+	//cin>>age;
+	info = getIn();
+	//cin>>info;
+	sgender = getIn();
+	//cin>>sgender;
 	name = scanInput();
 
 	if(!strcmp(sgender.c_str(), "male"))
@@ -486,7 +499,7 @@ void Cinema::printAllMovies()
 	list<Movie*>::iterator it;
 	for(it = movies.begin(); it != movies.end(); it++)
 	{
-		(*it)->print();
+		this->output += (*it)->print();
 	}
 }
 /**
@@ -498,7 +511,7 @@ void Cinema::printAllProfessionals()
 	list<Professional*>::iterator it;
 	for(it = professionals.begin(); it != professionals.end(); it++)
 	{
-		(*it)->print();
+		this->output += (*it)->print();
 	}
 }
 /**
@@ -510,7 +523,7 @@ int Cinema::printProfessionalsOfMovie(string movieId)
 	Movie* movie = findMovieById(movieId);
 	if(movie == NULL)
 		return 0;
-	movie->printProfessionals();
+	this->output += movie->printProfessionals();
 	return 1;
 }
 /**
@@ -520,7 +533,10 @@ int Cinema::printProfessionalsOfMovie(string movieId)
 void Cinema::printMovie(string movieId)
 {
 	Movie* movie = findMovieById(movieId);
-	movie->print();
+	//cout << movie->print();
+	//cout << 1;
+	this->output += movie->print();
+	//cout << this->output;
 }
 /**
  * this function get the input for merge movies function
@@ -532,10 +548,11 @@ int Cinema::mergeInput()
 	string value = "";
 	list<string> ids;
 	Movie* newMovie;
-	cin.get();
+
+	int i = 0;
 	do
 	{
-		input = cin.get();
+		input = this->msg[i];
 		if(input != '\n')
 		{
 			if(input == ',')
@@ -548,11 +565,13 @@ int Cinema::mergeInput()
 				value += input;
 			}
 		}
-		else
-		{
-			ids.push_back(value);
-		}
-	}while(input != '\n');
+		//else
+		//{
+			//ids.push_back(value);
+		//}
+		i++;
+	}while(i < this->msg.length());
+	ids.push_back(value);
 	newMovie = mergeMovies(ids);
 	return addNewMovie(newMovie);
 }
@@ -596,7 +615,7 @@ int Cinema::printMoviesWithProfessional(string pId)
 	{
 		if((*moviesIt)->hasProfessional(pId))
 		{
-			(*moviesIt)->print();
+			this->output += (*moviesIt)->print();
 		}
 	}
 	return 1;
@@ -618,7 +637,7 @@ void Cinema::printMoviesWithGenre(string genre)
 		{
 			if(!strcmp((*genreIt).c_str(), genre.c_str()))
 			{
-				currentMovie->print();
+				this->output += currentMovie->print();
 				break;
 			}
 		}
