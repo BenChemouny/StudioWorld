@@ -37,7 +37,6 @@ string TCPConnection::getAnswer(){
 	    else if (read_bytes < 0) {
 	    	perror("error reading from socket");
 	    }
-	cout << buffer;
 	return buffer;
 }
 TCPConnection::~TCPConnection() {

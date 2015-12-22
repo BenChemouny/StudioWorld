@@ -11,7 +11,6 @@ using namespace std;
 
 TCPConnection::TCPConnection(std::string Ip,int Port) {
 	this->sock = socket(AF_INET, SOCK_STREAM, 0);
-	this->DATA = "";
     memset(&this->sin, 0, sizeof(this->sin));
     this->sin.sin_family = AF_INET;
     this->sin.sin_addr.s_addr = inet_addr(Ip.data());
