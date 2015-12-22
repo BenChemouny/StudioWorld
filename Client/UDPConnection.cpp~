@@ -36,6 +36,6 @@ void UDPConnection::getAnswer(){
     cout << buffer;
 }
 UDPConnection::~UDPConnection() {
-	close(sock);
+	// TODO Auto-generated destructor stub
 }
 

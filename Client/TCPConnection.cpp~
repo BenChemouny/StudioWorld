@@ -40,6 +40,6 @@ void TCPConnection::getAnswer(){
 	cout << buffer;
 }
 TCPConnection::~TCPConnection() {
-	close(sock);
+	// TODO Auto-generated destructor stub
 }
 
