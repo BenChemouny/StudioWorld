@@ -26,6 +26,7 @@ void TCPConnection::sendMSG(std::string DATA,int length)
     if (sent_bytes < 0) {
         perror("error writing to socket");
     }
+    cout << "Sent : " << DATA.data()<< " To : " << sin.sin_addr.s_addr << ":" << sin.sin_port << endl;
 }
 void TCPConnection::getAnswer(){
 	char buffer[4096];
@@ -36,6 +37,10 @@ void TCPConnection::getAnswer(){
 	    }
 	    else if (read_bytes < 0) {
 	    	perror("error reading from socket");
+	    }
+	    else
+	    {
+	    	 cout << "The server sent: " << buffer << endl;
 	    }
 }
 TCPConnection::~TCPConnection() {

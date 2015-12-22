@@ -26,8 +26,9 @@ int main(int argc, char *argv[]) {
 		Conn = new UDPConnection(IP,Port);
 	}
 	else
+	{
 		return 1;
-	cout << "Hello, and Welcome to the Studio. (" << type << ") Edition !!"<<"\n \n" << endl;
+	}
 	std::getline(std::cin, command);	
 	while(command!="-1")
 	{

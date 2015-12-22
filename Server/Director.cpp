@@ -28,7 +28,7 @@ Director::Director(string id, string name, string info, int age, enum Gender gen
 /**
  * this function print the details about the director
  */
-string Director::print()
+void Director::print()
 {
-	return name;
+	cout << name;
 }
