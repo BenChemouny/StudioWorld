@@ -1,15 +1,18 @@
-#ifndef UDPSERVER_H_
-#define UDPSERVER_H_
+#ifndef SERVEROOP_TCPSERVER_H_
+#define SERVEROOP_TCPSERVER_H_
 #include "Recv.h"
 #include <string>
-//UDPServer class
-class UDPServer: public Recv {
+
+class TCPServer: public Recv {
+protected:
+	int client_sock;
+	int sock;
 public:
 	/*
-	* this is the constructor of the udpServer class
+	* this is the constructor of the tcpServer class
 	* @param port: the port that the server will listen to
 	*/
-	UDPServer(int port);
+	TCPServer(int port);
 	/*
 	* this function recive the message from the client and return it
 	* @return: the message
@@ -24,6 +27,10 @@ public:
 	/*
 	* the destructor of the class, close the socket
 	*/
-	virtual ~UDPServer();
+	virtual ~TCPServer();
 };
+
+
+
+
 #endif

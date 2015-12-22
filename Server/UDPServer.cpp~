@@ -3,6 +3,10 @@
 #include <iostream>
 using namespace std;
 
+/*
+* this is the constructor of the udpServer class
+* @param port: the port that the server will listen to
+*/
 UDPServer::UDPServer(int port)
 {
 	this->sock = socket(AF_INET, SOCK_DGRAM, 0);
@@ -20,6 +24,10 @@ UDPServer::UDPServer(int port)
 		perror("error binding to socket");
 	}
 }
+/*
+* this function recive the message from the client and return it
+* @return: the message
+*/
 std::string UDPServer::RecvMSG()
 {
 	unsigned int from_len = sizeof(struct sockaddr_in);
@@ -30,9 +38,13 @@ std::string UDPServer::RecvMSG()
 	{
 		perror("error reading from socket");
 	}
-	//cout<<"The client sends: "<<buffer<<endl;
 	return buffer;
 }
+/*
+* this function send a message to the client
+* @param DATA: the message to send
+* @param length: the length of the message
+*/
 void UDPServer::sendAnswer(std::string DATA, int length)
 {
 	int sent_bytes = sendto(sock, DATA.data(), length, 0, (struct sockaddr *)&sin, sizeof(sin));

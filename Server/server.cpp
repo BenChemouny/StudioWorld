@@ -1,10 +1,17 @@
+/*
+ * 8921005	Nadav Schweitzer
+		Ben Shimoni
+ */
 #include <iostream>
 #include <string>
 #include "UDPServer.h"
 #include "TCPServer.h"
 #include <stdlib.h>
 #include "Cinema.h"
-
+/**
+ * program name: ex4
+ * the operation: this program is the cinema program using the TCP and UDP protocols
+ */
 using namespace std;
 
 int main(int argc, char *argv[]) {

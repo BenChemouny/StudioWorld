@@ -19,6 +19,9 @@ using namespace std;
 Cinema::Cinema()
 {
 }
+/*
+* this function get the input from the input message
+*/
 string Cinema::getIn()
 {
 	string input = "";
@@ -56,7 +59,6 @@ string Cinema::start(string msg)
 		success = 1;
 		printmsg = 1;
 		command = atoi(getIn().c_str());
-		//cin>>command;
 		//get a command and do what it says
 		switch(command)
 		{
@@ -79,35 +81,27 @@ string Cinema::start(string msg)
 			}
 			break;
 		case 3:
-			//cin>>movieId;
-			//cin>>pId;
 			movieId = getIn();
 			pId = getIn();
 			success = addProfessionalToMovie(movieId, pId);
 			break;
 		case 4:
-			//cin>>movieId;
-			//cin>>genre;
 			movieId = getIn();
 			genre = getIn();
 			success = addGenreToMovie(movieId, genre);
 			break;
 		case 5:
-			//cin>>movieId;
-			//cin>>sortType;
 			movieId = getIn();
 			sortType = atoi(getIn().data());
 			success = setSortForMovie(movieId, sortType);
 			break;
 		case 6:
-			//cin>>movieId;
 			movieId = getIn();
 			success = printProfessionalsOfMovie(movieId);
 			if(success)
 				printmsg = 0;
 			break;
 		case 7:
-			//cin>>movieId;
 			movieId = getIn();
 			printMovie(movieId);
 			printmsg = 0;
@@ -117,24 +111,19 @@ string Cinema::start(string msg)
 			break;
 		case 9:
 			pId = getIn();
-			//cin>>pId;
 			success = printMoviesWithProfessional(pId);
 			if(success)
 				printmsg = 0;
 			break;
 		case 10:
-			//cin>>movieId
 			movieId = getIn();
 			success = deleteMovie(movieId);
 			break;
 		case 11:
-			//cin>>pId
 			pId = getIn();
 			success = deleteProfessional(pId);
 			break;
 		case 12:
-			//cin>>movieId
-			//cin>>pId
 			movieId = getIn();
 			pId = getIn();
 			success = deleteProfessionalFromMovie(movieId, pId);
@@ -148,7 +137,6 @@ string Cinema::start(string msg)
 			printmsg = 0;
 			break;
 		case 15:
-			//cin>>genre;
 			genre = getIn();
 			printMoviesWithGenre(genre);
 			printmsg = 0;
@@ -162,12 +150,10 @@ string Cinema::start(string msg)
 			//print if the command succeed or failed
 			if(success)
 			{
-				//cout<<"Success"<<endl;
 				this->output += "Success\n";
 			}
 			else
 			{
-				//cout<<"Failure"<<endl;
 				this->output += "Failure\n";
 			}
 		}
@@ -205,15 +191,10 @@ Movie* Cinema::scanMovie()
 	Movie* newMovie;
 
 	id = getIn();
-	//cin>>id;
 	name = getIn();
-	//cin>>name;
 	length = atoi(getIn().c_str());
-	//cin>>length;
 	publishYear = atoi(getIn().c_str());
-	//cin>>publishYear;
 	rate = atof(getIn().c_str());
-	//cin>>rate;
 	summary = scanInput();
 	//if there was an error new movie return NULL
 	newMovie = new Movie(id,name,length,publishYear, rate, summary);
@@ -231,15 +212,10 @@ Professional* Cinema::scanProfessional()
 	enum Gender gender;
 
 	type = atoi(getIn().c_str());
-	//cin>>type;
 	id = getIn();
-	//cin>>id;
 	age = atoi(getIn().c_str());
-	//cin>>age;
 	info = getIn();
-	//cin>>info;
 	sgender = getIn();
-	//cin>>sgender;
 	name = scanInput();
 
 	if(!strcmp(sgender.c_str(), "male"))
@@ -535,10 +511,7 @@ int Cinema::printProfessionalsOfMovie(string movieId)
 void Cinema::printMovie(string movieId)
 {
 	Movie* movie = findMovieById(movieId);
-	//cout << movie->print();
-	//cout << 1;
 	this->output += movie->print();
-	//cout << this->output;
 }
 /**
  * this function get the input for merge movies function
@@ -567,10 +540,6 @@ int Cinema::mergeInput()
 				value += input;
 			}
 		}
-		//else
-		//{
-			//ids.push_back(value);
-		//}
 		i++;
 	}while(i < this->msg.length());
 	ids.push_back(value);

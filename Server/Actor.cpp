@@ -41,7 +41,6 @@ string Actor::print()
 	stringstream convert;
 	convert << age;
 	string sAge = convert.str();
-	//string sage = string(age);
 	return name + " " + sAge;
 }
 /**

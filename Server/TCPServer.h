@@ -1,10 +1,3 @@
-/*
- * TCPServer.h
- *
- *  Created on: Dec 21, 2015
- *      Author: nadav
- */
-
 #ifndef SERVEROOP_TCPSERVER_H_
 #define SERVEROOP_TCPSERVER_H_
 #include "Recv.h"
@@ -12,16 +5,34 @@
 
 class TCPServer: public Recv {
 protected:
+	//the socket of the client
 	int client_sock;
+	//the socket of the server
 	int sock;
 public:
+	/*
+	* this is the constructor of the tcpServer class
+	* @param port: the port that the server will listen to
+	*/
 	TCPServer(int port);
+	/*
+	* this function recive the message from the client and return it
+	* @return: the message
+	*/
 	std::string RecvMSG();
+	/*
+	* this function send a message to the client
+	* @param DATA: the message to send
+	* @param length: the length of the message
+	*/
 	void sendAnswer(std::string DATA, int length);
+	/*
+	* the destructor of the class, close the socket
+	*/
 	virtual ~TCPServer();
 };
 
 
 
 
-#endif /* SERVEROOP_TCPSERVER_H_ */
+#endif

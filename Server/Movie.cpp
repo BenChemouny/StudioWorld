@@ -79,20 +79,13 @@ string Movie::print()
 	stringstream convert3;
 	convert1<<length;
 	string sLength = convert1.str();
-	//cout << sLength << endl;
 	convert2<<publishYear;
 	string sPublishYear = convert2.str();
 	convert3<<rate;
 	string sRate = convert3.str();
-	//cout << sRate << endl;
 	outp += id + " "+ name + " " + sLength + " "+ sPublishYear+ " "+ sRate+ " ";
-	//cout<<outp<<endl;
-	//cout<<id<<" "<<name<<" "<<length<<" "<<publishYear<<" "<<rate<<" ";
 	outp += printGenres();
-	//cout<<outp<<endl;
 	outp += summary + "\n";
-	//cout<<outp<<endl;
-	//cout<<summary<<endl;
 	printProfessionals();
 	return outp;
 }
@@ -101,7 +94,6 @@ string Movie::print()
  */
 string Movie::printProfessionals()
 {
-	//this->outp="";
 	sortProfessionals();
 	list<Professional*>::iterator it;
 	for(it = professionals.begin(); it != professionals.end(); it++)
@@ -131,16 +123,13 @@ string Movie::printGenres()
 		for(it = genres.begin(); it != genres.end(); it++)
 		{
 			outp += *it;
-			//cout<<*it;
 			if((++it)!=genres.end())
 			{
 				outp += ",";
-				//cout<<",";
 			}
 			--it;
 		}
 		outp += " ";
-		//cout<<" ";
 	}
 	return outp;
 }
