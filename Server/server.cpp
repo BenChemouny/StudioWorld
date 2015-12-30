@@ -19,6 +19,8 @@ int main(int argc, char *argv[]) {
 	{
 		return -1;
 	}
+	int user=0;
+	Cinema* current;
 	string type = string(argv[1]);
 	Recv* server;
 	if(type == "TCP")
@@ -33,12 +35,12 @@ int main(int argc, char *argv[]) {
 	{
 		return -1;
 	}
-	Cinema cinema;
-	while (true)
+	current = Cinema::getInstance();
+	while (user!=0)
 	{
 	std::string msg = "";
 	msg = server->RecvMSG();
-	string response = cinema.start(msg);
+	string response = current->start(msg);
 	server->sendAnswer(response, response.length());
 	}
 }

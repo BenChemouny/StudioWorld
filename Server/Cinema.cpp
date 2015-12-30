@@ -13,11 +13,31 @@
 #include <string.h>
 #include <stdlib.h>
 using namespace std;
-/**
- * empty constructor of cinema class
- */
+//Init
+Cinema* Cinema::firstInstance = NULL;
+bool Cinema::IsCreated = false;
+pthread_mutex_t Cinema::lock = PTHREAD_MUTEX_INITIALIZER;
+//End Init
 Cinema::Cinema()
 {
+}
+Cinema::~Cinema()
+{
+	pthread_mutex_destroy(&lock);
+}
+Cinema* Cinema::getInstance()
+{
+	if (!IsCreated)
+	{
+		pthread_mutex_lock(&lock);
+		if (!IsCreated)
+		{
+			firstInstance = new Cinema;
+		}
+		return firstInstance;
+		pthread_mutex_unlock(&lock);
+	}
+	return firstInstance;
 }
 /*
 * this function get the input from the input message

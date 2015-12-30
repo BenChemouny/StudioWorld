@@ -13,18 +13,27 @@
 //Cinema class
 class Cinema
 {
+private:
+	/**
+	 * empty constructor of cinema class - SingleSot support
+	 */
+	Cinema();
+	static bool IsCreated;
+	static Cinema* firstInstance;
+	static pthread_mutex_t lock;
 	//this list holds all the movies
 	list<Movie*> movies;
 	//this list holds all the professionals
 	list<Professional*> professionals;
-
 	string msg;
 	string output;
+
 public:
+	~Cinema();
 	/**
-	 * empty constructor of cinema class
+	 * Singleton for Cinema
 	 */
-	Cinema();
+	static Cinema* getInstance();
 	string getIn();
 	/*
 	 * this function start the program itself and wait for the user to type data
