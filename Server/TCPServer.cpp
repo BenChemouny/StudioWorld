@@ -59,12 +59,12 @@ int TCPServer::WaitForClient()
 * this function recive the message from the client and return it
 * @return: the message
 */
-std::string TCPServer::RecvMSG()
+std::string TCPServer::RecvMSG(int clientSock)
 {
 	char buffer[4096];
 	memset(&buffer, 0, sizeof(buffer));
 	int expected_data_len = sizeof(buffer);
-	int read_bytes = recv(client_sock, buffer, expected_data_len, 0);
+	int read_bytes = recv(clientSock, buffer, expected_data_len, 0);
 	if(read_bytes == 0)
 	{
 		return "";
@@ -79,9 +79,9 @@ std::string TCPServer::RecvMSG()
 * @param DATA: the message to send
 * @param length: the length of the message
 */
-void TCPServer::sendAnswer(std::string DATA, int length)
+void TCPServer::sendAnswer(std::string DATA, int length, int clientSock)
 {
-	int send_bytes = send(client_sock, DATA.c_str(), length, 0);
+	int send_bytes = send(clientSock, DATA.c_str(), length, 0);
 	if(send_bytes < 0)
 	{
 		perror("error sending to client");

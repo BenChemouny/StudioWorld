@@ -1,3 +1,3 @@
-Recv.d: ../Recv.cpp ../Recv.h
+Recv.o: ../Recv.cpp ../Recv.h
 
 ../Recv.h:

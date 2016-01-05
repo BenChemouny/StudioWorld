@@ -1,4 +1,4 @@
-Producer.d: ../Producer.cpp ../Producer.h ../Professional.h ../Movie.h
+Producer.o: ../Producer.cpp ../Producer.h ../Professional.h ../Movie.h
 
 ../Producer.h:
 

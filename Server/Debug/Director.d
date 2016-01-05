@@ -1,4 +1,4 @@
-Director.d: ../Director.cpp ../Director.h ../Professional.h ../Movie.h
+Director.o: ../Director.cpp ../Director.h ../Professional.h ../Movie.h
 
 ../Director.h:
 

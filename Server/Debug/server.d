@@ -1,4 +1,4 @@
-server.d: ../server.cpp ../TCPServer.h ../Recv.h ../Cinema.h \
+server.o: ../server.cpp ../TCPServer.h ../Recv.h ../Cinema.h \
  ../Professional.h ../Movie.h
 
 ../TCPServer.h:

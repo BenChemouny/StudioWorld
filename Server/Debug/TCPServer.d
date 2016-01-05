@@ -1,4 +1,4 @@
-TCPServer.d: ../TCPServer.cpp ../TCPServer.h ../Recv.h
+TCPServer.o: ../TCPServer.cpp ../TCPServer.h ../Recv.h
 
 ../TCPServer.h:
 

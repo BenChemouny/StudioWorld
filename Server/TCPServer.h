@@ -25,13 +25,13 @@ public:
 	* this function recive the message from the client and return it
 	* @return: the message
 	*/
-	std::string RecvMSG();
+	std::string RecvMSG(int clientSock);
 	/*
 	* this function send a message to the client
 	* @param DATA: the message to send
 	* @param length: the length of the message
 	*/
-	void sendAnswer(std::string DATA, int length);
+	void sendAnswer(std::string DATA, int length, int clientSock);
 	/*
 	* the destructor of the class, close the socket
 	*/

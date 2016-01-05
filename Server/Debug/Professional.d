@@ -1,4 +1,4 @@
-Professional.d: ../Professional.cpp ../Professional.h ../Movie.h
+Professional.o: ../Professional.cpp ../Professional.h ../Movie.h
 
 ../Professional.h:
 
