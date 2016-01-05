@@ -4,7 +4,6 @@
  */
 #include <iostream>
 #include <string>
-#include "UDPServer.h"
 #include "TCPServer.h"
 #include <stdlib.h>
 #include "Cinema.h"
@@ -13,7 +12,10 @@
  * the operation: this program is the cinema program using the TCP and UDP protocols
  */
 using namespace std;
-
+void *threadfunc(void* data)
+{
+	return NULL;
+}
 int main(int argc, char *argv[]) {
 	if(argc < 3)
 	{
@@ -26,10 +28,6 @@ int main(int argc, char *argv[]) {
 	if(type == "TCP")
 	{
 		server = new TCPServer(atoi(argv[2]));
-	}
-	else if(type == "UDP")
-	{
-		server = new UDPServer(atoi(argv[2]));
 	}
 	else
 	{

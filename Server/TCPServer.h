@@ -20,6 +20,7 @@ public:
 	* @param port: the port that the server will listen to
 	*/
 	TCPServer(int port);
+	int WaitForClient();
 	/*
 	* this function recive the message from the client and return it
 	* @return: the message

@@ -19,7 +19,6 @@ TCPServer::TCPServer(int port)
 	{
 		perror("error creating socket");
 	}
-
 	struct sockaddr_in sin;
 	memset(&sin, 0, sizeof(sin));
 	sin.sin_family = AF_INET;
@@ -33,7 +32,6 @@ TCPServer::TCPServer(int port)
 	{
 		perror("error listening to a socket");
 	}
-
 	struct sockaddr_in client_sin;
 	unsigned int addr_len = sizeof(client_sin);
 	client_sock = accept(sock, (struct sockaddr *)&client_sin, &addr_len);
@@ -41,6 +39,21 @@ TCPServer::TCPServer(int port)
 	{
 		perror("error accepting client");
 	}
+}
+int TCPServer::WaitForClient()
+{
+	if(listen(sock, 5) < 0)
+	{
+		perror("error listening to a socket");
+	}
+	struct sockaddr_in client_sin;
+	unsigned int addr_len = sizeof(client_sin);
+	client_sock = accept(sock, (struct sockaddr *)&client_sin, &addr_len);
+	if(client_sock < 0)
+	{
+		perror("error accepting client");
+	}
+	return client_sock;
 }
 /*
 * this function recive the message from the client and return it
