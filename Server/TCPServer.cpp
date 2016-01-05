@@ -14,6 +14,7 @@ using namespace std;
 */
 TCPServer::TCPServer(int port)
 {
+	cout<<"tcp"<<endl;
 	sock = socket(AF_INET, SOCK_STREAM, 0);
 	if(sock < 0)
 	{
@@ -28,7 +29,7 @@ TCPServer::TCPServer(int port)
 	if(bind(sock, (struct sockaddr *)&sin, sizeof(sin)) < 0) {
 		perror("error binding socket");
 	}
-	if(listen(sock, 5) < 0)
+	/*if(listen(sock, 5) < 0)
 	{
 		perror("error listening to a socket");
 	}
@@ -38,17 +39,20 @@ TCPServer::TCPServer(int port)
 	if(client_sock < 0)
 	{
 		perror("error accepting client");
-	}
+	}*/
 }
 int TCPServer::WaitForClient()
 {
+	cout<<"waitfor"<<endl;
 	if(listen(sock, 5) < 0)
 	{
 		perror("error listening to a socket");
 	}
 	struct sockaddr_in client_sin;
 	unsigned int addr_len = sizeof(client_sin);
+	cout<<"listen"<<endl;
 	client_sock = accept(sock, (struct sockaddr *)&client_sin, &addr_len);
+	cout<<"accept"<<endl;
 	if(client_sock < 0)
 	{
 		perror("error accepting client");

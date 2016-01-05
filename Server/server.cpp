@@ -21,10 +21,12 @@ void *threadfunc(void* data)
 {
 	S_Data sdata = *((S_Data*)data);
 	int clientSock = sdata.sock;
+	cout<<"thread started "<<clientSock<<endl;
 	Recv* server = sdata.server;
 	Cinema* current = Cinema::getInstance();
 	while (true)
 	{
+		cout<<"waiting "<<clientSock<<endl;
 		std::string msg = "";
 		msg = server->RecvMSG(clientSock);
 		if(!strcmp(msg.c_str(),"-1"))
@@ -34,6 +36,7 @@ void *threadfunc(void* data)
 	}
 }
 int main(int argc, char *argv[]) {
+	cout<<"start"<<endl;
 	if(argc < 3)
 	{
 		return -1;
@@ -49,18 +52,22 @@ int main(int argc, char *argv[]) {
 	{
 		return -1;
 	}
+	cout<<"..."<<endl;
 	current = Cinema::getInstance();
+	cout<<"instance"<<endl;
 	//list<pthread_t> threads;
 	int clientSock;
 	while(true)
 	{
 		pthread_t thread;
 		S_Data data;
+		cout<<"wait for client"<<endl;
 		clientSock = server->WaitForClient();
-
+		cout<<"got client"<<endl;
 		data.sock = clientSock;
 		data.server = server;
 		int status = pthread_create(&thread, NULL, threadfunc, NULL);
+		cout<<"open thread "<<status<<endl;
 		if(status)
 		{
 			//error("error with he thread");
