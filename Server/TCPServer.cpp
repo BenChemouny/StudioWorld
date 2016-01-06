@@ -29,6 +29,15 @@ TCPServer::TCPServer(int port)
 	if(bind(sock, (struct sockaddr *)&sin, sizeof(sin)) < 0) {
 		perror("error binding socket");
 	}
+
+
+	cout<<"waitfor"<<endl;
+	if(listen(sock, 5) < 0)
+	{
+		perror("error listening to a socket");
+	}
+
+
 	/*if(listen(sock, 5) < 0)
 	{
 		perror("error listening to a socket");
@@ -41,16 +50,15 @@ TCPServer::TCPServer(int port)
 		perror("error accepting client");
 	}*/
 }
-int TCPServer::WaitForClient()
+int TCPServer::WaitForClient(int port)
 {
-	cout<<"waitfor"<<endl;
-	if(listen(sock, 5) < 0)
-	{
-		perror("error listening to a socket");
-	}
+
+
+
+
 	struct sockaddr_in client_sin;
 	unsigned int addr_len = sizeof(client_sin);
-	cout<<"listen"<<endl;
+	cout<<"listen "<<sock<<endl;
 	client_sock = accept(sock, (struct sockaddr *)&client_sin, &addr_len);
 	cout<<"accept"<<endl;
 	if(client_sock < 0)

@@ -32,9 +32,8 @@ Cinema* Cinema::getInstance()
 		pthread_mutex_lock(&lock);
 		if (!IsCreated)
 		{
-			firstInstance = new Cinema;
+			firstInstance = new Cinema();
 		}
-		return firstInstance;
 		pthread_mutex_unlock(&lock);
 	}
 	return firstInstance;

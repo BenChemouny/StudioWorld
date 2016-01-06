@@ -24,6 +24,7 @@ void *threadfunc(void* data)
 	cout<<"thread started "<<clientSock<<endl;
 	Recv* server = sdata.server;
 	Cinema* current = Cinema::getInstance();
+	cout<<"got singleton"<<endl;
 	while (true)
 	{
 		cout<<"waiting "<<clientSock<<endl;
@@ -62,11 +63,11 @@ int main(int argc, char *argv[]) {
 		pthread_t thread;
 		S_Data data;
 		cout<<"wait for client"<<endl;
-		clientSock = server->WaitForClient();
+		clientSock = server->WaitForClient(atoi(argv[2]));
 		cout<<"got client"<<endl;
 		data.sock = clientSock;
 		data.server = server;
-		int status = pthread_create(&thread, NULL, threadfunc, NULL);
+		int status = pthread_create(&thread, NULL, threadfunc, (void*)&data);
 		cout<<"open thread "<<status<<endl;
 		if(status)
 		{

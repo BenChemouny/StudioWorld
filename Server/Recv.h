@@ -23,7 +23,7 @@ public:
 	virtual std::string RecvMSG(int clientSock) = 0;
 	//send message to the client
 	virtual void sendAnswer(std::string DATA, int length, int clientSock) = 0;
-	virtual int WaitForClient() = 0;
+	virtual int WaitForClient(int port) = 0;
 	//destructor
 	virtual ~Recv();
 protected:
