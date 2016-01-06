@@ -34,7 +34,7 @@ Cinema* Cinema::getInstance()
 		{
 			firstInstance = new Cinema();
 			IsCreated = true;
-			cout<<"Ben lo makshiv"<<endl;
+			cout<<"Ben lo makshiv!"<<endl;
 		}
 		pthread_mutex_unlock(&lock);
 	}
