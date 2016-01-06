@@ -23,7 +23,7 @@ void *threadfunc(void* data)
 	int clientSock = sdata.sock;
 	cout<<"thread started "<<clientSock<<endl;
 	Recv* server = sdata.server;
-	Cinema* current = Cinema::getInstance();
+
 	cout<<"got singleton"<<endl;
 	while (true)
 	{
@@ -32,6 +32,7 @@ void *threadfunc(void* data)
 		msg = server->RecvMSG(clientSock);
 		if(!strcmp(msg.c_str(),"-1"))
 			break;
+		Cinema* current = Cinema::getInstance();
 		string response = current->start(msg);
 		server->sendAnswer(response, response.length(), clientSock);
 	}
@@ -54,8 +55,8 @@ int main(int argc, char *argv[]) {
 		return -1;
 	}
 	cout<<"..."<<endl;
-	current = Cinema::getInstance();
-	cout<<"instance"<<endl;
+	//current = Cinema::getInstance();
+	//cout<<"instance"<<endl;
 	//list<pthread_t> threads;
 	int clientSock;
 	while(true)
