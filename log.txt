@@ -1,357 +1,405 @@
-*   commit c7fc712cfc8b8c440bb7b82599a878319ad7cd3c
-|\  Merge: 5a2bdfb 63f14eb
-| | Author: nadavsch <nadav658@gmail.com>
-| | Date:   Tue Dec 22 20:13:51 2015 +0200
-| | 
-| |     Merge branch 'master' of https://github.com/benchemouny/studioworld
-| |     
-| *   commit 63f14eb506dd7ef0d008fbc4a6f979d90a163d55
-| |\  Merge: 83adf91 1e04d30
-| | | Author: BenChemouny <waekyben@gmail.com>
-| | | Date:   Tue Dec 22 20:11:47 2015 +0200
-| | | 
-| | |     Added Documentation
-| | |    
-| * | commit 83adf9171954820d4b687f2bd6aab18c2c39ff8c
-| | | Author: BenChemouny <waekyben@gmail.com>
-| | | Date:   Tue Dec 22 20:10:56 2015 +0200
-| | | 
-| | |     Added Documentation
-| | |    
-* | | commit 5a2bdfb5c1c6915ea0133a3b963868505f949a36
-| |/  Author: nadavsch <nadav658@gmail.com>
-|/|   Date:   Tue Dec 22 20:13:21 2015 +0200
-| |   
-| |       Added the Comments
-| |   
-* | commit 1e04d306b559d0f0534f2bdb2db306ee24afca5c
-|/  Author: nadavsch <nadav658@gmail.com>
-|   Date:   Tue Dec 22 19:54:20 2015 +0200
-|   
-|       Added the Comments
-|  
-* commit fa56b12d95c2d756e26bb2e4676581dcb3c9bd82
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Tue Dec 22 19:32:51 2015 +0200
-| 
-|     Added log (without this commit)
-|  
-* commit f271aee635d19e7d374de16e99ee74707ea18f4c
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Tue Dec 22 19:25:53 2015 +0200
-| 
-|     Fixed closing sockets in the end
-|    
-*   commit 85b60aa4e4cd412ce6abc19e21d700ca1dea2ec8
-|\  Merge: 759bc79 0b2e504
-| | Author: BenChemouny <waekyben@gmail.com>
-| | Date:   Tue Dec 22 19:06:33 2015 +0200
-| | 
-| |     Merge branch 'master' of https://github.com/BenChemouny/StudioWorld
-| |   
-| * commit 0b2e504a6ba60fc41189338ac4664a5657183e3a
-| | Author: nadavsch <nadav658@gmail.com>
-| | Date:   Tue Dec 22 18:55:36 2015 +0200
-| | 
-| |     Get the server back on feet
-| |   
-* | commit 759bc79bae9204675a0232d5a396642826559827
-|/  Author: BenChemouny <waekyben@gmail.com>
-|   Date:   Tue Dec 22 19:05:38 2015 +0200
-|   
-|       Originize Files
-|  
-* commit 81a144b381af91f323173cb3e0373103419ea9bf
-| Author: nadavsch <nadav658@gmail.com>
-| Date:   Tue Dec 22 18:34:01 2015 +0200
-| 
-|     more fix
-|  
-* commit f3a61a1ac3687de78cfe7bd33cf96b71693c606d
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Tue Dec 22 17:48:45 2015 +0200
-| 
-|     Fix n2
-|  
-* commit 9bde0bb07830c7751a67137f19907dc11bdf4946
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Tue Dec 22 17:40:02 2015 +0200
-| 
-|     Fix n2
-|  
-* commit d16aed31d977bbd9391797b5c77bb0d48d6d6b10
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Tue Dec 22 17:32:58 2015 +0200
-| 
-|     Try n1
-|    
-*   commit f8da6737ffed846511acf00743c27566460cba0d
-|\  Merge: b36c065 5e0cb5a
-| | Author: nadavsch <nadav658@gmail.com>
-| | Date:   Tue Dec 22 17:26:02 2015 +0200
-| | 
-| |     fix
-| |   
-| * commit 5e0cb5a6d5e082a10991d187e36581d091ab289b
-| | Author: BenChemouny <waekyben@gmail.com>
-| | Date:   Tue Dec 22 17:22:51 2015 +0200
-| | 
-| |     And now for real....
-| |   
-* | commit b36c065b20f44a8bf34421628b62386ae44c6943
-|/  Author: nadavsch <nadav658@gmail.com>
-|   Date:   Tue Dec 22 17:23:46 2015 +0200
-|   
-|       bug fix
-|  
-* commit 4224dda89e0c2c0bafc3e6169fc5860048aa3cc6
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Tue Dec 22 17:01:56 2015 +0200
-| 
-|     Proper Formating of client interaction
-|  
-* commit ee694bf479652175302138c255a0b3544a7e543e
-| Author: nadavsch <nadav658@gmail.com>
-| Date:   Tue Dec 22 17:00:12 2015 +0200
-| 
-|     upgraded the server
-|  
-* commit bcc8fc927d7f9bbb3a67f34b93e6754400bd63ff
-| Author: nadavsch <nadav658@gmail.com>
-| Date:   Mon Dec 21 09:53:16 2015 +0200
-| 
-|     First fully working prototype
-|  
-* commit 450c83da9464c73e98d32581c89857ae1d58e77d
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 16:02:54 2015 +0200
-| 
-|     Added changes nadav needed to make, but didnt
-|  
-* commit 9bf7b033e9560e4fe2ae338510b03b973dd2dbca
-| Author: nadavsch <nadav658@gmail.com>
-| Date:   Mon Dec 21 07:15:17 2015 +0200
-| 
-|     Finished input
-|    
-*   commit ce3c41385c6077ebc4cd36a2290f6547114108f8
-|\  Merge: d430713 9b4f084
-| | Author: nadavsch <nadav658@gmail.com>
-| | Date:   Mon Dec 21 06:55:59 2015 +0200
-| | 
-| |     Merge branch 'master' of https://github.com/benchemouny/studioworld
-| |   
-| * commit 9b4f0848421ef8cc405dc032b401e7487a9db58c
-| | Author: BenChemouny <waekyben@gmail.com>
-| | Date:   Mon Dec 21 15:14:13 2015 +0200
-| | 
-| |     Implemented the getIn function to main Switch-case
-| |   
-* | commit d43071384b075c6c2dce9c828bfc9ae34173e900
-|/  Author: nadavsch <nadav658@gmail.com>
-|   Date:   Mon Dec 21 06:55:51 2015 +0200
-|   
-|       add getLine function
-|  
-* commit e190b3f64b0b4fa320ce7b4b001c89ffa93172bc
-| Author: nadavsch <nadav658@gmail.com>
-| Date:   Mon Dec 21 06:34:31 2015 +0200
-| 
-|     more changes
-|    
-*   commit 256966acb56f78a54a6d3dd9168be832e06371f5
-|\  Merge: 83ee52f 253fc60
-| | Author: nadavsch <nadav658@gmail.com>
-| | Date:   Mon Dec 21 06:24:22 2015 +0200
-| | 
-| |     Merge branch 'master' of https://github.com/benchemouny/studioworld
-| |   
-| * commit 253fc608c9339c16e555c040f8323e698a6dba4b
-| | Author: NadavSch <Nadav658@gmail.com>
-| | Date:   Mon Dec 21 14:17:46 2015 +0200
-| | 
-| |     Delete udpServer.cpp
-| |   
-* | commit 83ee52f571f40ee39fe07fd51ba45432012658b6
-|/  Author: nadavsch <nadav658@gmail.com>
-|   Date:   Mon Dec 21 06:23:30 2015 +0200
-|   
-|       changed the input output
-|    
-*   commit fa63b9bac411e0cabe07fc46b03dda595233e05d
-|\  Merge: aad73ad 6a49b07
-| | Author: nadavsch <nadav658@gmail.com>
-| | Date:   Mon Dec 21 05:44:09 2015 +0200
-| | 
-| |     Merge branch 'master' of https://github.com/benchemouny/studioworld
-| |     
-| *   commit 6a49b07183c12caf65df58d8d16a671ac620d5e5
-| |\  Merge: 50cda7d 7ff07be
-| | | Author: BenChemouny <waekyben@gmail.com>
-| | | Date:   Mon Dec 21 06:29:43 2015 +0200
-| | | 
-| | |     Merge branch 'master' of https://github.com/BenChemouny/StudioWorld
-| | |    
-| * | commit 50cda7dddf3603e30cc2bc12d2123ea92f83b84b
-| | | Author: BenChemouny <waekyben@gmail.com>
-| | | Date:   Mon Dec 21 06:28:14 2015 +0200
-| | | 
-| | |     Fix input - first msg
-| | |    
-* | | commit aad73aded6f917e9c15f3d8af2dcba5b6e150818
-| |/  Author: nadavsch <nadav658@gmail.com>
-|/|   Date:   Mon Dec 21 05:42:28 2015 +0200
-| |   
-| |       TCP added to the server
-| |   
-* | commit 7ff07be2eda42c9373d05ccef5cd4b7016b76ed6
-|/  Author: nadavsch <nadav658@gmail.com>
-|   Date:   Wed Dec 16 15:50:25 2015 +0200
-|   
-|       updated the functionality of the server
-|  
-* commit ba99f8d71ddbcf9f3cd289d6c0722546508fd446
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 05:40:41 2015 +0200
-| 
-|     Added Good Loops
-|  
-* commit c9a51c389c6dab346017bc0399e0de7faaed5868
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 05:30:53 2015 +0200
-| 
-|     Added Loops
-|  
-* commit 30af89fdb799137e66b75d5150cd4aee7baf2d3d
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 05:19:02 2015 +0200
-| 
-|     Added Client args and TCP/UDP implementation
-|  
-* commit 95bd439cea03b20c39333d364bc0ecfc52e6d7fc
-| Author: nadavsch <nadav658@gmail.com>
-| Date:   Wed Dec 16 15:20:46 2015 +0200
-| 
-|     Server now is OOP style
-|  
-* commit 0f54bac1adbb6a713ba3ca2b6d1a3f2549d57237
-| Author: nadavsch <nadav658@gmail.com>
-| Date:   Wed Dec 16 13:28:03 2015 +0200
-| 
-|     added UDP server file
-|  
-* commit d6cb3a51db46aca0bfa8c68b8e62d81d54118e69
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 03:20:18 2015 +0200
-| 
-|     Delete hello.txt~
-|  
-* commit 2aa3b7d3a831f3bdad533bbae635651865cca152
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 03:20:10 2015 +0200
-| 
-|     Delete BBOBOOOOMB~
-|  
-* commit b278940145308cc75e572612639368a9002fc889
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 03:20:03 2015 +0200
-| 
-|     Delete udp_client1.cpp
-|  
-* commit 5c89dc5c5573865e40a3c2ecef6ad0a254081283
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 03:19:53 2015 +0200
-| 
-|     Delete tcp_client.cpp
-|  
-* commit c741f3ed55095606317b79048ed54893f093868d
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 03:10:19 2015 +0200
-| 
-|     Added IP input
-|  
-* commit 5a10bf20745c3c39fb6c6a5bb39cc4f0695e0a05
-| Author: BenChemouny <waekyben@gmail.com>
-| Date:   Mon Dec 21 02:46:23 2015 +0200
-| 
-|     Added Client Test
-|  
-* commit b2ac2083f2d62fbe4fc749b1f3c29a3060b3f5e3
-| Author: NadavSch <Nadav658@gmail.com>
-| Date:   Mon Dec 21 01:19:25 2015 +0200
-| 
-|     Delete temp
-|  
-* commit 6d7a82dac560421a4ee28a6e44931cadd7018393
-| Author: nadavsch <nadav658@gmail.com>
-| Date:   Wed Dec 16 11:23:56 2015 +0200
-| 
-|     server files added
-|  
-* commit bdbe316055e8e9c3aebbe0de884abf6e0ee4908b
-| Author: NadavSch <Nadav658@gmail.com>
-| Date:   Mon Dec 21 01:14:43 2015 +0200
-| 
-|     Create temp
-|  
-* commit 03855e61f9cbd3c1a0f6c55ed63b119e3f96a7d3
-| Author: NadavSch <Nadav658@gmail.com>
-| Date:   Mon Dec 21 01:14:32 2015 +0200
-| 
-|     Create temp
-|  
-* commit 365e07849f97357cd32e1d4f5292cdefe1def7bd
-| Author: NadavSch <Nadav658@gmail.com>
-| Date:   Mon Dec 21 01:14:16 2015 +0200
-| 
-|     Delete newFile.txt
-|  
-* commit b53ec07d5416e7453ba17278913f855e8be9fde7
-| Author: NadavSch <Nadav658@gmail.com>
-| Date:   Mon Dec 21 01:14:00 2015 +0200
-| 
-|     Create newFile.txt
-|    
-*   commit c74954c80d031af5910b485ee22b01ea0193fd89
-|\  Merge: 1bdfff0 2d57b26
-| | Author: BenChemouny <waekyben@gmail.com>
-| | Date:   Mon Dec 21 01:01:57 2015 +0200
-| | 
-| |     Merge branch 'master' of https://github.com/BenChemouny/StudioWorld
-| |   
-| * commit 2d57b26e71212f542e8ef39c627c8ae38c212c23
-| | Author: BenChemouny <waekyben@gmail.com>
-| | Date:   Mon Dec 21 01:00:37 2015 +0200
-| | 
-| |     Delete hello.txt
-| |   
-| * commit ac87c33d6c6803cc7b6ed3fde2c312402224dca0
-| | Author: BenChemouny <waekyben@gmail.com>
-| | Date:   Mon Dec 21 01:00:27 2015 +0200
-| | 
-| |     Delete BBOBOOOOMB.txt
-| |   
-* | commit 1bdfff044da5a02b476f402f229a9a75d2ec9178
-|/  Author: BenChemouny <waekyben@gmail.com>
-|   Date:   Mon Dec 21 01:01:21 2015 +0200
-|   
-|       Start Project, Added README
-|    
-*   commit 3e4df8e34e0923132fb2021012adb23206dbab3e
-|\  Merge: 921aa75 48fc9cd
-| | Author: nadavsch <nadav658@gmail.com>
-| | Date:   Wed Dec 16 10:57:31 2015 +0200
-| | 
-| |     Merge branch 'master' of https://github.com/benchemouny/studioworld
-| |   
-| * commit 48fc9cd08e9a8c3fd82ab01bc47139c58f37974a
-|   Author: BenChemouny <waekyben@gmail.com>
-|   Date:   Mon Dec 21 00:46:46 2015 +0200
-|   
-|       Hello, first time here
-|  
-* commit 921aa7554710c23877906e016cbd26cd510ae76f
-  Author: nadavsch <nadav658@gmail.com>
-  Date:   Wed Dec 16 10:51:27 2015 +0200
-  
-      this is my first commit
+commit b684f206a5cecd6522f8c8e9bef32869b528e4ab
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Jan 6 03:11:52 2016 +0200
+
+    fix
+
+commit 9165c2e413440c177df83c1b0988a7e7c858f754
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Jan 6 02:43:33 2016 +0200
+
+    multi-threaded server is now on and kicking
+
+commit 54a8bed609d544265993ca2d3c56e073d76c7f87
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Jan 6 02:19:56 2016 +0200
+
+    fixed some bugs
+
+commit 8747ed8649887f69531a70c8c2cb1f5a75227b69
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Jan 6 00:48:54 2016 +0200
+
+    added cout to find the error
+
+commit 012ff1f30b7be4fcdf9b0ad58c7a4f590b5a5054
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Jan 6 00:28:51 2016 +0200
+
+    Added support of multi-threaded usage of the server
+
+commit 0b44471364bb496fbc60d0a1360d6ab80ae54385
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Jan 5 23:06:31 2016 +0200
+
+    Change server to 3 Parts mechanizm
+
+commit c4803c233b853b4be96e0bd31ca4766afd7f77d2
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Wed Dec 30 21:48:04 2015 +0200
+
+    Creating SingleTon, needs work
+
+commit 7bb2ad8008bcc2943b61233cb434b82ff22b2b22
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 20:16:12 2015 +0200
+
+    THE END
+
+commit c7fc712cfc8b8c440bb7b82599a878319ad7cd3c
+Merge: 5a2bdfb 63f14eb
+Author: nadavsch <nadav658@gmail.com>
+Date:   Tue Dec 22 20:13:51 2015 +0200
+
+    Merge branch 'master' of https://github.com/benchemouny/studioworld
+
+commit 5a2bdfb5c1c6915ea0133a3b963868505f949a36
+Author: nadavsch <nadav658@gmail.com>
+Date:   Tue Dec 22 20:13:21 2015 +0200
+
+    a
+
+commit 63f14eb506dd7ef0d008fbc4a6f979d90a163d55
+Merge: 83adf91 1e04d30
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 20:11:47 2015 +0200
+
+    Added Documentation
+
+commit 83adf9171954820d4b687f2bd6aab18c2c39ff8c
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 20:10:56 2015 +0200
+
+    Added Documentation
+
+commit 1e04d306b559d0f0534f2bdb2db306ee24afca5c
+Author: nadavsch <nadav658@gmail.com>
+Date:   Tue Dec 22 19:54:20 2015 +0200
+
+    a
+
+commit fa56b12d95c2d756e26bb2e4676581dcb3c9bd82
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 19:32:51 2015 +0200
+
+    Added log (without this commit)
+
+commit f271aee635d19e7d374de16e99ee74707ea18f4c
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 19:25:53 2015 +0200
+
+    Fixed closing sockets in the end
+
+commit 85b60aa4e4cd412ce6abc19e21d700ca1dea2ec8
+Merge: 759bc79 0b2e504
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 19:06:33 2015 +0200
+
+    Merge branch 'master' of https://github.com/BenChemouny/StudioWorld
+
+commit 759bc79bae9204675a0232d5a396642826559827
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 19:05:38 2015 +0200
+
+    Originize Files
+
+commit 0b2e504a6ba60fc41189338ac4664a5657183e3a
+Author: nadavsch <nadav658@gmail.com>
+Date:   Tue Dec 22 18:55:36 2015 +0200
+
+    Get the server back on feet
+
+commit 81a144b381af91f323173cb3e0373103419ea9bf
+Author: nadavsch <nadav658@gmail.com>
+Date:   Tue Dec 22 18:34:01 2015 +0200
+
+    more fix
+
+commit f3a61a1ac3687de78cfe7bd33cf96b71693c606d
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 17:48:45 2015 +0200
+
+    Fix n2
+
+commit 9bde0bb07830c7751a67137f19907dc11bdf4946
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 17:40:02 2015 +0200
+
+    Fix n2
+
+commit d16aed31d977bbd9391797b5c77bb0d48d6d6b10
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 17:32:58 2015 +0200
+
+    Try n1
+
+commit f8da6737ffed846511acf00743c27566460cba0d
+Merge: b36c065 5e0cb5a
+Author: nadavsch <nadav658@gmail.com>
+Date:   Tue Dec 22 17:26:02 2015 +0200
+
+    fix
+
+commit b36c065b20f44a8bf34421628b62386ae44c6943
+Author: nadavsch <nadav658@gmail.com>
+Date:   Tue Dec 22 17:23:46 2015 +0200
+
+    bug fix
+
+commit 5e0cb5a6d5e082a10991d187e36581d091ab289b
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 17:22:51 2015 +0200
+
+    And now for real....
+
+commit 4224dda89e0c2c0bafc3e6169fc5860048aa3cc6
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Tue Dec 22 17:01:56 2015 +0200
+
+    Proper Formating of client interaction
+
+commit ee694bf479652175302138c255a0b3544a7e543e
+Author: nadavsch <nadav658@gmail.com>
+Date:   Tue Dec 22 17:00:12 2015 +0200
+
+    upgraded the server
+
+commit bcc8fc927d7f9bbb3a67f34b93e6754400bd63ff
+Author: nadavsch <nadav658@gmail.com>
+Date:   Mon Dec 21 09:53:16 2015 +0200
+
+    First fully working prototype
+
+commit 450c83da9464c73e98d32581c89857ae1d58e77d
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 16:02:54 2015 +0200
+
+    Added changes nadav needed to make, but didnt
+
+commit 9bf7b033e9560e4fe2ae338510b03b973dd2dbca
+Author: nadavsch <nadav658@gmail.com>
+Date:   Mon Dec 21 07:15:17 2015 +0200
+
+    Finished input
+
+commit ce3c41385c6077ebc4cd36a2290f6547114108f8
+Merge: d430713 9b4f084
+Author: nadavsch <nadav658@gmail.com>
+Date:   Mon Dec 21 06:55:59 2015 +0200
+
+    Merge branch 'master' of https://github.com/benchemouny/studioworld
+
+commit 9b4f0848421ef8cc405dc032b401e7487a9db58c
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 15:14:13 2015 +0200
+
+    Implemented the getIn function to main Switch-case
+
+commit d43071384b075c6c2dce9c828bfc9ae34173e900
+Author: nadavsch <nadav658@gmail.com>
+Date:   Mon Dec 21 06:55:51 2015 +0200
+
+    add getLine function
+
+commit e190b3f64b0b4fa320ce7b4b001c89ffa93172bc
+Author: nadavsch <nadav658@gmail.com>
+Date:   Mon Dec 21 06:34:31 2015 +0200
+
+    more changes
+
+commit 256966acb56f78a54a6d3dd9168be832e06371f5
+Merge: 83ee52f 253fc60
+Author: nadavsch <nadav658@gmail.com>
+Date:   Mon Dec 21 06:24:22 2015 +0200
+
+    Merge branch 'master' of https://github.com/benchemouny/studioworld
+
+commit 253fc608c9339c16e555c040f8323e698a6dba4b
+Author: NadavSch <Nadav658@gmail.com>
+Date:   Mon Dec 21 14:17:46 2015 +0200
+
+    Delete udpServer.cpp
+
+commit 83ee52f571f40ee39fe07fd51ba45432012658b6
+Author: nadavsch <nadav658@gmail.com>
+Date:   Mon Dec 21 06:23:30 2015 +0200
+
+    changed the input output
+
+commit fa63b9bac411e0cabe07fc46b03dda595233e05d
+Merge: aad73ad 6a49b07
+Author: nadavsch <nadav658@gmail.com>
+Date:   Mon Dec 21 05:44:09 2015 +0200
+
+    Merge branch 'master' of https://github.com/benchemouny/studioworld
+
+commit 6a49b07183c12caf65df58d8d16a671ac620d5e5
+Merge: 50cda7d 7ff07be
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 06:29:43 2015 +0200
+
+    Merge branch 'master' of https://github.com/BenChemouny/StudioWorld
+
+commit 50cda7dddf3603e30cc2bc12d2123ea92f83b84b
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 06:28:14 2015 +0200
+
+    Fix input - first msg
+
+commit aad73aded6f917e9c15f3d8af2dcba5b6e150818
+Author: nadavsch <nadav658@gmail.com>
+Date:   Mon Dec 21 05:42:28 2015 +0200
+
+    TCP added to the server
+
+commit ba99f8d71ddbcf9f3cd289d6c0722546508fd446
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 05:40:41 2015 +0200
+
+    Added Good Loops
+
+commit c9a51c389c6dab346017bc0399e0de7faaed5868
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 05:30:53 2015 +0200
+
+    Added Loops
+
+commit 30af89fdb799137e66b75d5150cd4aee7baf2d3d
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 05:19:02 2015 +0200
+
+    Added Client args and TCP/UDP implementation
+
+commit 7ff07be2eda42c9373d05ccef5cd4b7016b76ed6
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Dec 16 15:50:25 2015 +0200
+
+    updated the functionality of the server
+
+commit 95bd439cea03b20c39333d364bc0ecfc52e6d7fc
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Dec 16 15:20:46 2015 +0200
+
+    Server now is OOP style
+
+commit 0f54bac1adbb6a713ba3ca2b6d1a3f2549d57237
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Dec 16 13:28:03 2015 +0200
+
+    added UDP server file
+
+commit d6cb3a51db46aca0bfa8c68b8e62d81d54118e69
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 03:20:18 2015 +0200
+
+    Delete hello.txt~
+
+commit 2aa3b7d3a831f3bdad533bbae635651865cca152
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 03:20:10 2015 +0200
+
+    Delete BBOBOOOOMB~
+
+commit b278940145308cc75e572612639368a9002fc889
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 03:20:03 2015 +0200
+
+    Delete udp_client1.cpp
+
+commit 5c89dc5c5573865e40a3c2ecef6ad0a254081283
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 03:19:53 2015 +0200
+
+    Delete tcp_client.cpp
+
+commit c741f3ed55095606317b79048ed54893f093868d
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 03:10:19 2015 +0200
+
+    Added IP input
+
+commit 5a10bf20745c3c39fb6c6a5bb39cc4f0695e0a05
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 02:46:23 2015 +0200
+
+    Added Client Test
+
+commit b2ac2083f2d62fbe4fc749b1f3c29a3060b3f5e3
+Author: NadavSch <Nadav658@gmail.com>
+Date:   Mon Dec 21 01:19:25 2015 +0200
+
+    Delete temp
+
+commit 6d7a82dac560421a4ee28a6e44931cadd7018393
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Dec 16 11:23:56 2015 +0200
+
+    server files added
+
+commit bdbe316055e8e9c3aebbe0de884abf6e0ee4908b
+Author: NadavSch <Nadav658@gmail.com>
+Date:   Mon Dec 21 01:14:43 2015 +0200
+
+    Create temp
+
+commit 03855e61f9cbd3c1a0f6c55ed63b119e3f96a7d3
+Author: NadavSch <Nadav658@gmail.com>
+Date:   Mon Dec 21 01:14:32 2015 +0200
+
+    Create temp
+
+commit 365e07849f97357cd32e1d4f5292cdefe1def7bd
+Author: NadavSch <Nadav658@gmail.com>
+Date:   Mon Dec 21 01:14:16 2015 +0200
+
+    Delete newFile.txt
+
+commit b53ec07d5416e7453ba17278913f855e8be9fde7
+Author: NadavSch <Nadav658@gmail.com>
+Date:   Mon Dec 21 01:14:00 2015 +0200
+
+    Create newFile.txt
+
+commit c74954c80d031af5910b485ee22b01ea0193fd89
+Merge: 1bdfff0 2d57b26
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 01:01:57 2015 +0200
+
+    Merge branch 'master' of https://github.com/BenChemouny/StudioWorld
+
+commit 1bdfff044da5a02b476f402f229a9a75d2ec9178
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 01:01:21 2015 +0200
+
+    Start Project, Added README
+
+commit 2d57b26e71212f542e8ef39c627c8ae38c212c23
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 01:00:37 2015 +0200
+
+    Delete hello.txt
+
+commit ac87c33d6c6803cc7b6ed3fde2c312402224dca0
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 01:00:27 2015 +0200
+
+    Delete BBOBOOOOMB.txt
+
+commit 3e4df8e34e0923132fb2021012adb23206dbab3e
+Merge: 921aa75 48fc9cd
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Dec 16 10:57:31 2015 +0200
+
+    Merge branch 'master' of https://github.com/benchemouny/studioworld
+
+commit 48fc9cd08e9a8c3fd82ab01bc47139c58f37974a
+Author: BenChemouny <waekyben@gmail.com>
+Date:   Mon Dec 21 00:46:46 2015 +0200
+
+    Hello, first time here
+
+commit 921aa7554710c23877906e016cbd26cd510ae76f
+Author: nadavsch <nadav658@gmail.com>
+Date:   Wed Dec 16 10:51:27 2015 +0200
+
+    this is my first commit
