@@ -47,7 +47,7 @@ void *threadfunc(void* data)
 	}
 }
 int main(int argc, char *argv[]) {
-	//if we dont have enough args we return -1
+	//if we dont have enough args we return -1.
 	if(argc < 3)
 	{
 		return -1;
