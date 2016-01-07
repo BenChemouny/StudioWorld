@@ -20,9 +20,14 @@ public:
 	* @param port: the port that the server will listen to
 	*/
 	TCPServer(int port);
+	/*
+	* Listens the the port and awaits incoming clients.
+	* @return client_sock : the socket that the server received from a client
+	*/
 	int WaitForClient(int port);
 	/*
 	* this function recive the message from the client and return it
+	* @param clientSock to which the thread waits for user input.
 	* @return: the message
 	*/
 	std::string RecvMSG(int clientSock);

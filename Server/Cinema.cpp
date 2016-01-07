@@ -25,6 +25,10 @@ Cinema::~Cinema()
 {
 	pthread_mutex_destroy(&lock);
 }
+/*
+* Singleton Instance creator, using the static variables and the locks.
+* returns the singleton object , or creates it if not yet created.
+*/
 Cinema* Cinema::getInstance()
 {
 	if (!IsCreated)

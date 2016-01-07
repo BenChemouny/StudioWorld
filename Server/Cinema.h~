@@ -1,5 +1,5 @@
 /*
- * student name: Nadav Schweitzer
+ * student name: Nadav Schweitzer & Ben Shimoni
  * exercise name: ex4
  * file description: cinema class
  */
@@ -13,18 +13,30 @@
 //Cinema class
 class Cinema
 {
+private:
+	/**
+	 * empty constructor of cinema class - SingleSot support
+	 */
+	Cinema();
+	static bool IsCreated;
+	static Cinema* firstInstance;
+	static pthread_mutex_t lock;
 	//this list holds all the movies
 	list<Movie*> movies;
 	//this list holds all the professionals
 	list<Professional*> professionals;
-
 	string msg;
 	string output;
+
 public:
 	/**
-	 * empty constructor of cinema class
+	 * Private constructor for Cinema
 	 */
-	Cinema();
+	~Cinema();
+	/**
+	 * Singleton for Cinema
+	 */
+	static Cinema* getInstance();
 	string getIn();
 	/*
 	 * this function start the program itself and wait for the user to type data

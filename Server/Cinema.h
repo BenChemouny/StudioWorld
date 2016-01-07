@@ -18,6 +18,9 @@ private:
 	 * empty constructor of cinema class - SingleSot support
 	 */
 	Cinema();
+	/**
+	 * Initialize IsCreated to false, firstInstance to null, and pthread_mutex_t lock.
+	 */
 	static bool IsCreated;
 	static Cinema* firstInstance;
 	static pthread_mutex_t lock;
@@ -29,6 +32,9 @@ private:
 	string output;
 
 public:
+	/**
+	 * Private constructor for Cinema
+	 */
 	~Cinema();
 	/**
 	 * Singleton for Cinema
