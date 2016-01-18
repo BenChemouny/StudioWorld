@@ -199,12 +199,12 @@ string Cinema::start(string msg)
 			//print if the command succeed or failed
 			if(success)
 			{
-				this->output += "Success\n";
 				this->exportCinema();
+				return "Success\n";
 			}
 			else
 			{
-				this->output += "Failure\n";
+				return "Failure\n";
 			}
 		}
 		return output;

@@ -71,7 +71,6 @@ public:
 	/**
 	 * destructor of this class
 	 */
-	string isMale();
 	virtual ~Professional();
 };
 

@@ -17,7 +17,7 @@ string Professional::getId() const
 string Professional::exportPro()
 {
 	string agestr = static_cast<ostringstream*>( &(ostringstream() << age) )->str();
-	return (type+" "+id+" "+agestr+" "+info+" "+isMale()+" "+name);
+	return (type+" "+id+" "+agestr+" "+info+" "+"Male"+" "+name);
 }
 /**
  * this function return the age of the pro
@@ -64,10 +64,6 @@ string Professional::getInfo() const
 bool Professional::operator==(const Professional& other)
 {
 	return getId() == other.getId();
-}
-string Professional::isMale()
-{
-	return "Male";
 }
 /**
  * destructor of this class
