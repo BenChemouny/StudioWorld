@@ -7,6 +7,7 @@
 #define SRC_PROFESSIONAL_H_
 #include <string>
 #include "Movie.h"
+#include <sstream>
 using namespace std;
 
 enum Gender{Male,Female};
@@ -26,6 +27,7 @@ protected:
 	enum Gender gender;
 	//the amount of movies
 	int amountOfMovies;
+	int type;
 public:
 	/**
 	 * abstract function.
@@ -36,6 +38,7 @@ public:
 	 * this function return the id of the professional
 	 * @return: the id of the professional
 	 */
+	string exportPro();
 	string getId() const;
 	/**
 	 * this function return the age of the pro
@@ -68,6 +71,7 @@ public:
 	/**
 	 * destructor of this class
 	 */
+	string isMale();
 	virtual ~Professional();
 };
 

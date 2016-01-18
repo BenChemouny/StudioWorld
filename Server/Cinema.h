@@ -30,6 +30,7 @@ private:
 	list<Professional*> professionals;
 	string msg;
 	string output;
+	string backup;
 
 public:
 	/**
@@ -170,6 +171,8 @@ public:
 	 * @param genre: the genre
 	 */
 	void printMoviesWithGenre(string genre);
+	void exportCinema();
+	void LoadCinema();
 };
 
 #endif

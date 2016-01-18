@@ -137,6 +137,7 @@ public:
 	 * this function sort the professional by the sort type
 	 */
 	void sortProfessionals();
+	string exportMovie();
 };
 
 #endif

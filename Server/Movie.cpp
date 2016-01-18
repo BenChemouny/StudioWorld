@@ -89,6 +89,31 @@ string Movie::print()
 	printProfessionals();
 	return outp;
 }
+string Movie::exportMovie()
+{
+	this->outp="";
+	stringstream convert1;
+	stringstream convert2;
+	stringstream convert3;
+	convert1<<length;
+	string sLength = convert1.str();
+	convert2<<publishYear;
+	string sPublishYear = convert2.str();
+	convert3<<rate;
+	string sRate = convert3.str();
+	outp += id + " "+ name + " " + sLength + " "+ sPublishYear+ " "+ sRate+ " ";
+	outp += printGenres();
+	outp += summary + "\n|";
+	sortProfessionals();
+	list<Professional*>::iterator it;
+	for(it = professionals.begin(); it != professionals.end(); it++)
+	{
+		outp += (*it)->getId();
+		outp += ",";
+	}
+	outp +="|";
+	return outp;
+}
 /**
  * this function print all the professionals of this movie
  */

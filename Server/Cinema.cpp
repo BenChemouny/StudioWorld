@@ -12,6 +12,8 @@
 #include <string>
 #include <string.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
 using namespace std;
 //Init
 Cinema* Cinema::firstInstance = NULL;
@@ -38,7 +40,6 @@ Cinema* Cinema::getInstance()
 		{
 			firstInstance = new Cinema();
 			IsCreated = true;
-			cout<<"Ben lo makshiv!"<<endl;
 		}
 		pthread_mutex_unlock(&lock);
 	}
@@ -67,8 +68,31 @@ string Cinema::getIn()
 /*
  * this function start the program itself and wait for the user to type data
  */
+void Cinema::LoadCinema()
+{
+	string backup="";
+	ofstream myfile;
+	myfile.open ("ServerDB.txt");
+	//myfile >> backup;
+	list<Movie*>::iterator it;
+	for(it = movies.begin(); it != movies.end(); it++)
+		{
+			backup += (*it)->exportMovie();
+			backup +="||";
+		}
+	backup+="\n!@#$%^&*()\n";
+	list<Professional*>::iterator it2;
+	for(it2 = professionals.begin(); it2 != professionals.end(); it2++)
+		{
+			backup += (*it2)->print();
+			backup += "||";
+		}
+
+	myfile.close();
+}
 string Cinema::start(string msg)
 {
+
 	this->msg = msg;
 	this->output = "";
 	Movie* newMovie;
@@ -176,6 +200,7 @@ string Cinema::start(string msg)
 			if(success)
 			{
 				this->output += "Success\n";
+				this->exportCinema();
 			}
 			else
 			{
@@ -503,6 +528,28 @@ void Cinema::printAllMovies()
 		this->output += (*it)->print();
 	}
 }
+void Cinema::exportCinema()
+{
+	string backup="P\n";
+	ofstream myfile;
+	myfile.open ("ServerDB.txt");
+	list<Professional*>::iterator it2;
+	for(it2 = professionals.begin(); it2 != professionals.end(); it2++)
+		{
+			backup += (*it2)->exportPro();
+			backup += "\n";
+		}
+	backup+="M\n";
+	list<Movie*>::iterator it;
+	for(it = movies.begin(); it != movies.end(); it++)
+		{
+			backup += (*it)->exportMovie();
+			backup +="\n";
+		}
+	backup+="E";
+	myfile << backup;
+	myfile.close();
+}
 /**
  * this function print all the professionals from the professionals list using
  * the single print function
@@ -515,6 +562,10 @@ void Cinema::printAllProfessionals()
 		this->output += (*it)->print();
 		this->output += "\n";
 	}
+}
+void Export()
+{
+
 }
 /**
  * this function print all the professionals of a given movie
