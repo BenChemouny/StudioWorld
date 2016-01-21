@@ -25,6 +25,7 @@ public:
 	/**
 	 * this function print the details about the producer
 	 */
+	int getType();
 	string print();
 };
 

@@ -43,6 +43,10 @@ string Actor::print()
 	string sAge = convert.str();
 	return name + " " + sAge;
 }
+int Actor::getType()
+{
+	return 1;
+}
 /**
  * this is the destructor of the actor
  */

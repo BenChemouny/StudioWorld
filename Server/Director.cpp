@@ -32,3 +32,7 @@ string Director::print()
 {
 	return name;
 }
+int Director::getType()
+{
+	return 0;
+}

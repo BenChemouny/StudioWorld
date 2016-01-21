@@ -39,6 +39,8 @@ Cinema* Cinema::getInstance()
 		if (!IsCreated)
 		{
 			firstInstance = new Cinema();
+			cout << "Loading Cinema" <<endl;
+			firstInstance->LoadCinema();
 			IsCreated = true;
 		}
 		pthread_mutex_unlock(&lock);
@@ -71,28 +73,60 @@ string Cinema::getIn()
 void Cinema::LoadCinema()
 {
 	string backup="";
-	ofstream myfile;
+	ifstream myfile;
+	string currentMovieID;
+	string ProAppear;
+	size_t pos = 0;
 	myfile.open ("ServerDB.txt");
-	//myfile >> backup;
-	list<Movie*>::iterator it;
-	for(it = movies.begin(); it != movies.end(); it++)
-		{
-			backup += (*it)->exportMovie();
-			backup +="||";
-		}
-	backup+="\n!@#$%^&*()\n";
-	list<Professional*>::iterator it2;
-	for(it2 = professionals.begin(); it2 != professionals.end(); it2++)
-		{
-			backup += (*it2)->print();
-			backup += "||";
-		}
-
+	cout<<"Opening file"<<endl;
+	string thisLine;
+	if (myfile.is_open())
+	  {
+		cout<<"Reading file"<<endl;
+		getline (myfile,thisLine);
+		cout << "ReadLine : " + thisLine <<endl;
+	    if (thisLine=="P")
+	    {
+	    	cout<<"Recreating Pros"<<endl;
+	    	getline (myfile,thisLine);
+	    	cout << "ReadLine : " + thisLine <<endl;
+	    	while(thisLine!="M")
+	    	{
+	    		cout <<"Sending :  2 "+thisLine<<endl;
+	    		this->start("2 "+thisLine,1);
+	    		getline (myfile,thisLine);
+	    		cout << "ReadLine : " + thisLine <<endl;
+	    	}
+	    	getline (myfile,thisLine);
+	    	cout << "ReadLine : " + thisLine <<endl;
+	    	cout<<"Recreating Movies"<<endl;
+	    	while(thisLine!="E")
+	    	{
+	    		cout << "Sending :  1 "+thisLine<<endl;
+	    		this->start("1 "+thisLine,1);
+	    		string delimiter = " ";
+	    		currentMovieID = thisLine.substr(0, thisLine.find(delimiter));
+	    		getline (myfile,thisLine);
+	    		delimiter = ",";
+	    		cout << "ReadLine : " + thisLine <<endl;
+	    		while ((pos = thisLine.find(delimiter)) != std::string::npos) {
+	    		    ProAppear = thisLine.substr(0, pos);
+	    		    cout << "Sending :  3 "+currentMovieID+" "+ProAppear<< endl;
+	    		    this->start("3 "+currentMovieID+" "+ProAppear,1);
+	    		    thisLine.erase(0, pos + delimiter.length());
+	    		    cout<<thisLine<<endl;
+	    		}
+	    		getline (myfile,thisLine);
+	    		cout << "ReadLine : " + thisLine <<endl;
+	    	}
+	    }
+	  }
+	cout<<"Closing File"<<endl;
 	myfile.close();
 }
-string Cinema::start(string msg)
+string Cinema::start(string msg,int readOnly)
 {
-
+	cout << msg <<endl;
 	this->msg = msg;
 	this->output = "";
 	Movie* newMovie;
@@ -199,7 +233,7 @@ string Cinema::start(string msg)
 			//print if the command succeed or failed
 			if(success)
 			{
-				this->exportCinema();
+				if(readOnly==0) this->exportCinema();
 				return "Success\n";
 			}
 			else

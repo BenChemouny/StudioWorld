@@ -103,7 +103,7 @@ string Movie::exportMovie()
 	string sRate = convert3.str();
 	outp += id + " "+ name + " " + sLength + " "+ sPublishYear+ " "+ sRate+ " ";
 	outp += printGenres();
-	outp += summary + "\n|";
+	outp += summary + "\n";
 	sortProfessionals();
 	list<Professional*>::iterator it;
 	for(it = professionals.begin(); it != professionals.end(); it++)
@@ -111,7 +111,6 @@ string Movie::exportMovie()
 		outp += (*it)->getId();
 		outp += ",";
 	}
-	outp +="|";
 	return outp;
 }
 /**

@@ -26,6 +26,7 @@ public:
 	/**
 	 * this function print the details about the screen writer
 	 */
+	int getType();
 	string print();
 };
 

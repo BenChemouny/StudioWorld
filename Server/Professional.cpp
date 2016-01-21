@@ -17,7 +17,8 @@ string Professional::getId() const
 string Professional::exportPro()
 {
 	string agestr = static_cast<ostringstream*>( &(ostringstream() << age) )->str();
-	return (type+" "+id+" "+agestr+" "+info+" "+"Male"+" "+name);
+	string typestr = static_cast<ostringstream*>( &(ostringstream() << getType()) )->str();
+	return (typestr+" "+id+" "+agestr+" "+info+" "+"Male"+" "+name);
 }
 /**
  * this function return the age of the pro

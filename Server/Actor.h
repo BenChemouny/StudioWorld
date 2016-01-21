@@ -33,6 +33,7 @@ public:
 	/**
 	 * destructor of actor
 	 */
+	int getType();
 	~Actor();
 };
 

@@ -71,6 +71,7 @@ public:
 	/**
 	 * destructor of this class
 	 */
+	virtual int getType()=0;
 	virtual ~Professional();
 };
 

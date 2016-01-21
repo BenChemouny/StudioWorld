@@ -39,9 +39,7 @@ void *threadfunc(void* data)
 		{
 			break;
 		}
-		//get the most updated cinema instance
-		Cinema* current = Cinema::getInstance();
-		string response = current->start(msg);
+		string response = Cinema::getInstance()->start(msg,0);
 		//send the answer to the client
 		server->sendAnswer(response, response.length(), clientSock);
 	}
@@ -52,7 +50,6 @@ int main(int argc, char *argv[]) {
 	{
 		return -1;
 	}
-	Cinema* current;
 	string type = string(argv[1]);
 	Recv* server;
 	//check that we are using TCP

@@ -33,3 +33,7 @@ string ScreenWriter::print()
 {
 	return name + " " + info ;
 }
+int ScreenWriter::getType()
+{
+	return 2;
+}

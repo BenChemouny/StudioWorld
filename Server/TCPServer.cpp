@@ -36,8 +36,6 @@ TCPServer::TCPServer(int port)
 	{
 		perror("error listening to a socket");
 	}
-
-
 	/*if(listen(sock, 5) < 0)
 	{
 		perror("error listening to a socket");
@@ -52,10 +50,6 @@ TCPServer::TCPServer(int port)
 }
 int TCPServer::WaitForClient(int port)
 {
-
-
-
-
 	struct sockaddr_in client_sin;
 	unsigned int addr_len = sizeof(client_sin);
 	cout<<"listen "<<sock<<endl;

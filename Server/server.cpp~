@@ -23,6 +23,7 @@ struct S_Data {
  */
 void *threadfunc(void* data)
 {
+	cout<<"Start";
 	//retrive the data
 	S_Data sdata = *((S_Data*)data);
 	//get the client sock
@@ -39,20 +40,17 @@ void *threadfunc(void* data)
 		{
 			break;
 		}
-		//get the most updated cinema instance
-		Cinema* current = Cinema::getInstance();
-		string response = current->start(msg);
+		string response = Cinema::getInstance()->start(msg);
 		//send the answer to the client
 		server->sendAnswer(response, response.length(), clientSock);
 	}
 }
 int main(int argc, char *argv[]) {
-	//if we dont have enough args we return -1
+	//if we dont have enough args we return -1.
 	if(argc < 3)
 	{
 		return -1;
 	}
-	Cinema* current;
 	string type = string(argv[1]);
 	Recv* server;
 	//check that we are using TCP
@@ -77,6 +75,7 @@ int main(int argc, char *argv[]) {
 		data.sock = clientSock;
 		data.server = server;
 		int status = pthread_create(&thread, NULL, threadfunc, (void*)&data);
+		cout <<"opening thread\n";
 		//if there was an error we print a message
 		if(status)
 		{

@@ -32,3 +32,7 @@ string Producer::print()
 {
 	return name;
 }
+int Producer::getType()
+{
+	return 3;
+}
